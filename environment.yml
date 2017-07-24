@@ -1,0 +1,8 @@
+name: cydatemapdev
+dependencies:
+    - python=2.7.12
+    - nose
+    - cython
+    - mako
+    - pip:
+        - git+https://github.com/jcrudy/cyinterval.git
