@@ -68,8 +68,8 @@ class TestDateMap(object):
     
     def test_split(self):
         dm = DateMap.from_tuples([self.y2001, self.y2003, self.y2006])
-        assert dm.split(364) == [DateMap.from_tuples([tup]) for tup in [self.y2001, self.y2003, self.y2006]]
-        assert dm.split(365) == [DateMap.from_tuples(tups) for tups in [[self.y2001, self.y2003], [self.y2006]]]
+        assert dm.split(365) == [DateMap.from_tuples([tup]) for tup in [self.y2001, self.y2003, self.y2006]]
+        assert dm.split(366) == [DateMap.from_tuples(tups) for tups in [[self.y2001, self.y2003], [self.y2006]]]
 
     def test_in(self):
         dm = DateMap.from_tuples([self.y2001,self.y2003])
@@ -132,13 +132,13 @@ class TestDateMap(object):
         days = dm.period
         assert dm.slice(upper=days) == dm
         
-#     def test_invert(self):
-#         dm1 = DateMap.from_tuples([self.y2001,self.y2003,self.y2004])
-#         dm2 = DateMap.from_tuples([self.y2003, self.y2005])
-#         dm3 = DateMap.from_tuples([self.y2001, self.y2004])
-#         dm4 = DateMap.from_tuples([self.y2005])
-#         assert_equal(dm3, dm1 & ~dm2)
-#         assert_equal(dm4, dm2 & ~dm1)
+    def test_invert(self):
+        dm1 = DateMap.from_tuples([self.y2001,self.y2003,self.y2004])
+        dm2 = DateMap.from_tuples([self.y2003, self.y2005])
+        dm3 = DateMap.from_tuples([self.y2001, self.y2004])
+        dm4 = DateMap.from_tuples([self.y2005])
+        assert_equal(dm3, dm1 & ~dm2)
+        assert_equal(dm4, dm2 & ~dm1)
     
     def test_sub(self):
         dm1 = DateMap.from_tuples([self.y2001,self.y2003,self.y2004])
@@ -178,6 +178,16 @@ class TestDateMap(object):
         assert_not_equal(FenceSitter(),dm)
         assert_not_equal(dm,FenceSitter())
         
+    def test_days_between(self):
+        dm = DateMap.from_tuples([self.y2001,self.y2003])
+        assert_equal(dm.days_between(d(2001,12,31), d(2003,1,2), True, True), 3)
+        assert_equal(dm.days_between(d(2001,12,31), d(2003,1,2), True, False), 2)
+        assert_equal(dm.days_between(d(2001,12,31), d(2003,1,2), False, True), 2)
+        assert_equal(dm.days_between(d(2001,12,31), d(2003,1,2), False, False), 1)
+        assert_equal(dm.days_between(d(2001,11,29), d(2001,12,5), False, False), 5)
+        assert_equal(dm.days_between(d(2001,11,29), d(2001,12,5), True, False), 6)
+        assert_equal(dm.days_between(d(2001,11,29), d(2001,12,5), False, True), 6)
+        assert_equal(dm.days_between(d(2001,11,29), d(2001,12,5), True, True), 7)
         
 if __name__ == '__main__':
     import sys
