@@ -2,7 +2,6 @@ from setuptools import setup, find_packages, Extension
 import versioneer
 import sys
 import os
-from mako.lookup import TemplateLookup
 
 # mako_templates=[(os.path.join('cydatemap', 'cydatemap.mako.pyx'), os.path.join('cydatemap', 'cydatemap.pyx')),
 #                       (os.path.join('cydatemap', 'cydatemap.mako.pxd'), os.path.join('cydatemap', 'cydatemap.pxd'))]
