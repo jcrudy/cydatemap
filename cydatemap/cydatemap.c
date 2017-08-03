@@ -5273,7 +5273,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
  *             previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
  *         result.append(DateMap(DateIntervalSet(tuple(current_intervals))))             # <<<<<<<<<<<<<<
  *         return result
- * #
+ * 
  */
   __pyx_t_3 = PyList_AsTuple(__pyx_v_current_intervals); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -5300,8 +5300,8 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
  *             previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
  *         result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
  *         return result             # <<<<<<<<<<<<<<
- * #
- * #         current_upper = self.intervals[0].upper_bound if not self.intervals[0].upper_closed else self.intervals[0].upper_bound + day
+ * 
+ * 
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_result);

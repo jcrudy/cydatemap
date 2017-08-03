@@ -167,18 +167,7 @@ cdef class DateMap:
             previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
         result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
         return result
-#         
-#         current_upper = self.intervals[0].upper_bound if not self.intervals[0].upper_closed else self.intervals[0].upper_bound + day
-#                 result = []
-#         for interval in self.intervals[1:]:
-#             current_lower = self.intervals[1].lower_bound if self.intervals[0].lower_closed else self.intervals[0].lower_bound + day
-# 
-#             if (interval.lower_bound - current_upper).days + (1 if not interval.lower_closed else 0) > max_gap:
-#                 result.append((current_lower, current_upper))
-#                 current_lower = interval.upper_bound if not interval.upper_closed else interval.upper_bound + day
-#             current_upper = interval.upper_bound
-#         result.append((current_lower, current_upper))
-#         return [self.truncate(lower, upper) for lower, upper in result]
+        
     
     
 
