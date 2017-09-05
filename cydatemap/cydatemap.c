@@ -798,7 +798,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet {
 };
 
 
-/* "cyinterval/cyinterval.pxd":54
+/* "cyinterval/cyinterval.pxd":56
  *     cpdef ObjectIntervalSet minus(ObjectIntervalSet self, ObjectIntervalSet other)
  * 
  * cdef class DateInterval(BaseInterval):             # <<<<<<<<<<<<<<
@@ -813,7 +813,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_DateInterval {
 };
 
 
-/* "cyinterval/cyinterval.pxd":72
+/* "cyinterval/cyinterval.pxd":74
  * cpdef tuple DateInterval_preprocess_intervals(tuple intervals)
  * 
  * cdef class DateIntervalSetIterator(BaseIntervalSetIterator):             # <<<<<<<<<<<<<<
@@ -826,7 +826,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSetIterator {
 };
 
 
-/* "cyinterval/cyinterval.pxd":75
+/* "cyinterval/cyinterval.pxd":77
  *     cdef readonly DateIntervalSet interval_set
  * 
  * cdef class DateIntervalSet(BaseIntervalSet):             # <<<<<<<<<<<<<<
@@ -839,7 +839,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet {
 };
 
 
-/* "cyinterval/cyinterval.pxd":89
+/* "cyinterval/cyinterval.pxd":93
  *     cpdef DateIntervalSet minus(DateIntervalSet self, DateIntervalSet other)
  * 
  * cdef class IntInterval(BaseInterval):             # <<<<<<<<<<<<<<
@@ -854,7 +854,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_IntInterval {
 };
 
 
-/* "cyinterval/cyinterval.pxd":107
+/* "cyinterval/cyinterval.pxd":111
  * cpdef tuple IntInterval_preprocess_intervals(tuple intervals)
  * 
  * cdef class IntIntervalSetIterator(BaseIntervalSetIterator):             # <<<<<<<<<<<<<<
@@ -867,7 +867,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSetIterator {
 };
 
 
-/* "cyinterval/cyinterval.pxd":110
+/* "cyinterval/cyinterval.pxd":114
  *     cdef readonly IntIntervalSet interval_set
  * 
  * cdef class IntIntervalSet(BaseIntervalSet):             # <<<<<<<<<<<<<<
@@ -880,7 +880,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet {
 };
 
 
-/* "cyinterval/cyinterval.pxd":124
+/* "cyinterval/cyinterval.pxd":130
  *     cpdef IntIntervalSet minus(IntIntervalSet self, IntIntervalSet other)
  * 
  * cdef class FloatInterval(BaseInterval):             # <<<<<<<<<<<<<<
@@ -895,7 +895,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_FloatInterval {
 };
 
 
-/* "cyinterval/cyinterval.pxd":142
+/* "cyinterval/cyinterval.pxd":148
  * cpdef tuple FloatInterval_preprocess_intervals(tuple intervals)
  * 
  * cdef class FloatIntervalSetIterator(BaseIntervalSetIterator):             # <<<<<<<<<<<<<<
@@ -908,7 +908,7 @@ struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSetIterator {
 };
 
 
-/* "cyinterval/cyinterval.pxd":145
+/* "cyinterval/cyinterval.pxd":151
  *     cdef readonly FloatIntervalSet interval_set
  * 
  * cdef class FloatIntervalSet(BaseIntervalSet):             # <<<<<<<<<<<<<<
@@ -973,6 +973,8 @@ static struct __pyx_vtabstruct_10cyinterval_10cyinterval_ObjectInterval *__pyx_v
 struct __pyx_vtabstruct_10cyinterval_10cyinterval_ObjectIntervalSet {
   PyBoolObject *(*lower_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*upper_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet *, int __pyx_skip_dispatch);
+  PyObject *(*lower_bound)(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet *, int __pyx_skip_dispatch);
+  PyObject *(*upper_bound)(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet *, int __pyx_skip_dispatch);
   PyObject *(*init_args)(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*contains)(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet *, PyObject *, int __pyx_skip_dispatch);
   PyBoolObject *(*empty)(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet *, int __pyx_skip_dispatch);
@@ -987,7 +989,7 @@ struct __pyx_vtabstruct_10cyinterval_10cyinterval_ObjectIntervalSet {
 static struct __pyx_vtabstruct_10cyinterval_10cyinterval_ObjectIntervalSet *__pyx_vtabptr_10cyinterval_10cyinterval_ObjectIntervalSet;
 
 
-/* "cyinterval/cyinterval.pxd":54
+/* "cyinterval/cyinterval.pxd":56
  *     cpdef ObjectIntervalSet minus(ObjectIntervalSet self, ObjectIntervalSet other)
  * 
  * cdef class DateInterval(BaseInterval):             # <<<<<<<<<<<<<<
@@ -1012,7 +1014,7 @@ struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval {
 static struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval *__pyx_vtabptr_10cyinterval_10cyinterval_DateInterval;
 
 
-/* "cyinterval/cyinterval.pxd":75
+/* "cyinterval/cyinterval.pxd":77
  *     cdef readonly DateIntervalSet interval_set
  * 
  * cdef class DateIntervalSet(BaseIntervalSet):             # <<<<<<<<<<<<<<
@@ -1023,6 +1025,8 @@ static struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval *__pyx_vta
 struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet {
   PyBoolObject *(*lower_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*upper_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *, int __pyx_skip_dispatch);
+  PyDateTime_Date *(*lower_bound)(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *, int __pyx_skip_dispatch);
+  PyDateTime_Date *(*upper_bound)(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *, int __pyx_skip_dispatch);
   PyObject *(*init_args)(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*contains)(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *, PyDateTime_Date *, int __pyx_skip_dispatch);
   PyBoolObject *(*empty)(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *, int __pyx_skip_dispatch);
@@ -1037,7 +1041,7 @@ struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet {
 static struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *__pyx_vtabptr_10cyinterval_10cyinterval_DateIntervalSet;
 
 
-/* "cyinterval/cyinterval.pxd":89
+/* "cyinterval/cyinterval.pxd":93
  *     cpdef DateIntervalSet minus(DateIntervalSet self, DateIntervalSet other)
  * 
  * cdef class IntInterval(BaseInterval):             # <<<<<<<<<<<<<<
@@ -1062,7 +1066,7 @@ struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntInterval {
 static struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntInterval *__pyx_vtabptr_10cyinterval_10cyinterval_IntInterval;
 
 
-/* "cyinterval/cyinterval.pxd":110
+/* "cyinterval/cyinterval.pxd":114
  *     cdef readonly IntIntervalSet interval_set
  * 
  * cdef class IntIntervalSet(BaseIntervalSet):             # <<<<<<<<<<<<<<
@@ -1073,6 +1077,8 @@ static struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntInterval *__pyx_vtab
 struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntIntervalSet {
   PyBoolObject *(*lower_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*upper_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet *, int __pyx_skip_dispatch);
+  int (*lower_bound)(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet *, int __pyx_skip_dispatch);
+  int (*upper_bound)(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet *, int __pyx_skip_dispatch);
   PyObject *(*init_args)(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*contains)(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet *, int, int __pyx_skip_dispatch);
   PyBoolObject *(*empty)(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet *, int __pyx_skip_dispatch);
@@ -1087,7 +1093,7 @@ struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntIntervalSet {
 static struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntIntervalSet *__pyx_vtabptr_10cyinterval_10cyinterval_IntIntervalSet;
 
 
-/* "cyinterval/cyinterval.pxd":124
+/* "cyinterval/cyinterval.pxd":130
  *     cpdef IntIntervalSet minus(IntIntervalSet self, IntIntervalSet other)
  * 
  * cdef class FloatInterval(BaseInterval):             # <<<<<<<<<<<<<<
@@ -1112,7 +1118,7 @@ struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatInterval {
 static struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatInterval *__pyx_vtabptr_10cyinterval_10cyinterval_FloatInterval;
 
 
-/* "cyinterval/cyinterval.pxd":145
+/* "cyinterval/cyinterval.pxd":151
  *     cdef readonly FloatIntervalSet interval_set
  * 
  * cdef class FloatIntervalSet(BaseIntervalSet):             # <<<<<<<<<<<<<<
@@ -1123,6 +1129,8 @@ static struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatInterval *__pyx_vt
 struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatIntervalSet {
   PyBoolObject *(*lower_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*upper_bounded)(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet *, int __pyx_skip_dispatch);
+  double (*lower_bound)(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet *, int __pyx_skip_dispatch);
+  double (*upper_bound)(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet *, int __pyx_skip_dispatch);
   PyObject *(*init_args)(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet *, int __pyx_skip_dispatch);
   PyBoolObject *(*contains)(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet *, double, int __pyx_skip_dispatch);
   PyBoolObject *(*empty)(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet *, int __pyx_skip_dispatch);
@@ -1697,6 +1705,8 @@ static PyObject *__pyx_n_s_upper;
 static PyObject *__pyx_n_s_upper_bounded;
 static PyObject *__pyx_n_s_upper_closed;
 static int __pyx_pf_9cydatemap_9cydatemap_7DateMap___init__(struct __pyx_obj_9cydatemap_9cydatemap_DateMap *__pyx_v_self, struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *__pyx_v_intervals); /* proto */
+static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_11upper_bound___get__(struct __pyx_obj_9cydatemap_9cydatemap_DateMap *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_11lower_bound___get__(struct __pyx_obj_9cydatemap_9cydatemap_DateMap *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(PyTypeObject *__pyx_v_cls, PyObject *__pyx_v_tuples); /* proto */
 static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_4__or__(struct __pyx_obj_9cydatemap_9cydatemap_DateMap *__pyx_v_self, PyObject *__pyx_v_other); /* proto */
 static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_obj_9cydatemap_9cydatemap_DateMap *__pyx_v_self, PyObject *__pyx_v_other); /* proto */
@@ -2044,7 +2054,7 @@ static int __pyx_pf_9cydatemap_9cydatemap_7DateMap___init__(struct __pyx_obj_9cy
  *                 self.bounded = False
  *                 break             # <<<<<<<<<<<<<<
  * 
- *     @classmethod
+ *     @property
  */
       goto __pyx_L4_break;
     }
@@ -2085,6 +2095,200 @@ static int __pyx_pf_9cydatemap_9cydatemap_7DateMap___init__(struct __pyx_obj_9cy
 
 /* "cydatemap/cydatemap.pyx":27
  * 
+ *     @property
+ *     def upper_bound(DateMap self):             # <<<<<<<<<<<<<<
+ *         if self.intervals.upper_bounded():
+ *             return self.intervals.upper_bound()
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_11upper_bound_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_11upper_bound_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_11upper_bound___get__(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_11upper_bound___get__(struct __pyx_obj_9cydatemap_9cydatemap_DateMap *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_t_2;
+  __Pyx_RefNannySetupContext("__get__", 0);
+
+  /* "cydatemap/cydatemap.pyx":28
+ *     @property
+ *     def upper_bound(DateMap self):
+ *         if self.intervals.upper_bounded():             # <<<<<<<<<<<<<<
+ *             return self.intervals.upper_bound()
+ *         else:
+ */
+  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->upper_bounded(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (__pyx_t_2) {
+
+    /* "cydatemap/cydatemap.pyx":29
+ *     def upper_bound(DateMap self):
+ *         if self.intervals.upper_bounded():
+ *             return self.intervals.upper_bound()             # <<<<<<<<<<<<<<
+ *         else:
+ *             return None
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->upper_bound(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_r = __pyx_t_1;
+    __pyx_t_1 = 0;
+    goto __pyx_L0;
+
+    /* "cydatemap/cydatemap.pyx":28
+ *     @property
+ *     def upper_bound(DateMap self):
+ *         if self.intervals.upper_bounded():             # <<<<<<<<<<<<<<
+ *             return self.intervals.upper_bound()
+ *         else:
+ */
+  }
+
+  /* "cydatemap/cydatemap.pyx":31
+ *             return self.intervals.upper_bound()
+ *         else:
+ *             return None             # <<<<<<<<<<<<<<
+ * 
+ *     @property
+ */
+  /*else*/ {
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(Py_None);
+    __pyx_r = Py_None;
+    goto __pyx_L0;
+  }
+
+  /* "cydatemap/cydatemap.pyx":27
+ * 
+ *     @property
+ *     def upper_bound(DateMap self):             # <<<<<<<<<<<<<<
+ *         if self.intervals.upper_bounded():
+ *             return self.intervals.upper_bound()
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("cydatemap.cydatemap.DateMap.upper_bound.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "cydatemap/cydatemap.pyx":34
+ * 
+ *     @property
+ *     def lower_bound(DateMap self):             # <<<<<<<<<<<<<<
+ *         if self.intervals.lower_bounded():
+ *             return self.intervals.lower_bound()
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_11lower_bound_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_11lower_bound_1__get__(PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
+  __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_11lower_bound___get__(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_11lower_bound___get__(struct __pyx_obj_9cydatemap_9cydatemap_DateMap *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_t_2;
+  __Pyx_RefNannySetupContext("__get__", 0);
+
+  /* "cydatemap/cydatemap.pyx":35
+ *     @property
+ *     def lower_bound(DateMap self):
+ *         if self.intervals.lower_bounded():             # <<<<<<<<<<<<<<
+ *             return self.intervals.lower_bound()
+ *         else:
+ */
+  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->lower_bounded(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (__pyx_t_2) {
+
+    /* "cydatemap/cydatemap.pyx":36
+ *     def lower_bound(DateMap self):
+ *         if self.intervals.lower_bounded():
+ *             return self.intervals.lower_bound()             # <<<<<<<<<<<<<<
+ *         else:
+ *             return None
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->lower_bound(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_r = __pyx_t_1;
+    __pyx_t_1 = 0;
+    goto __pyx_L0;
+
+    /* "cydatemap/cydatemap.pyx":35
+ *     @property
+ *     def lower_bound(DateMap self):
+ *         if self.intervals.lower_bounded():             # <<<<<<<<<<<<<<
+ *             return self.intervals.lower_bound()
+ *         else:
+ */
+  }
+
+  /* "cydatemap/cydatemap.pyx":38
+ *             return self.intervals.lower_bound()
+ *         else:
+ *             return None             # <<<<<<<<<<<<<<
+ * 
+ *     @classmethod
+ */
+  /*else*/ {
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(Py_None);
+    __pyx_r = Py_None;
+    goto __pyx_L0;
+  }
+
+  /* "cydatemap/cydatemap.pyx":34
+ * 
+ *     @property
+ *     def lower_bound(DateMap self):             # <<<<<<<<<<<<<<
+ *         if self.intervals.lower_bounded():
+ *             return self.intervals.lower_bound()
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("cydatemap.cydatemap.DateMap.lower_bound.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "cydatemap/cydatemap.pyx":41
+ * 
  *     @classmethod
  *     def from_tuples(cls, list tuples):             # <<<<<<<<<<<<<<
  *         intervals = []
@@ -2097,7 +2301,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_3from_tuples(PyObject *
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("from_tuples (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_tuples), (&PyList_Type), 1, "tuples", 1))) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_tuples), (&PyList_Type), 1, "tuples", 1))) __PYX_ERR(0, 41, __pyx_L1_error)
   __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(((PyTypeObject*)__pyx_v_cls), ((PyObject*)__pyx_v_tuples));
 
   /* function exit code */
@@ -2123,19 +2327,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(PyTypeObje
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("from_tuples", 0);
 
-  /* "cydatemap/cydatemap.pyx":28
+  /* "cydatemap/cydatemap.pyx":42
  *     @classmethod
  *     def from_tuples(cls, list tuples):
  *         intervals = []             # <<<<<<<<<<<<<<
  *         for policy in tuples:
  *             intr = DateInterval(policy[0],policy[1],lower_closed=True,upper_closed=False,lower_bounded=True,upper_bounded=True)
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_intervals = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cydatemap/cydatemap.pyx":29
+  /* "cydatemap/cydatemap.pyx":43
  *     def from_tuples(cls, list tuples):
  *         intervals = []
  *         for policy in tuples:             # <<<<<<<<<<<<<<
@@ -2144,32 +2348,32 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(PyTypeObje
  */
   if (unlikely(__pyx_v_tuples == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 29, __pyx_L1_error)
+    __PYX_ERR(0, 43, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_v_tuples; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_policy, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "cydatemap/cydatemap.pyx":30
+    /* "cydatemap/cydatemap.pyx":44
  *         intervals = []
  *         for policy in tuples:
  *             intr = DateInterval(policy[0],policy[1],lower_closed=True,upper_closed=False,lower_bounded=True,upper_bounded=True)             # <<<<<<<<<<<<<<
  *             intervals.append(intr)
  *         return cls(DateIntervalSet(DateInterval_preprocess_intervals(tuple(intervals))))
  */
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_policy, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 30, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_policy, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_policy, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_policy, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 30, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 44, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3);
@@ -2177,29 +2381,29 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(PyTypeObje
     PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
     __pyx_t_3 = 0;
     __pyx_t_4 = 0;
-    __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
+    __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_True) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_True) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
-    __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 30, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_True) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_True) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF_SET(__pyx_v_intr, ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "cydatemap/cydatemap.pyx":31
+    /* "cydatemap/cydatemap.pyx":45
  *         for policy in tuples:
  *             intr = DateInterval(policy[0],policy[1],lower_closed=True,upper_closed=False,lower_bounded=True,upper_bounded=True)
  *             intervals.append(intr)             # <<<<<<<<<<<<<<
  *         return cls(DateIntervalSet(DateInterval_preprocess_intervals(tuple(intervals))))
  * 
  */
-    __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_intervals, ((PyObject *)__pyx_v_intr)); if (unlikely(__pyx_t_6 == -1)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_intervals, ((PyObject *)__pyx_v_intr)); if (unlikely(__pyx_t_6 == -1)) __PYX_ERR(0, 45, __pyx_L1_error)
 
-    /* "cydatemap/cydatemap.pyx":29
+    /* "cydatemap/cydatemap.pyx":43
  *     def from_tuples(cls, list tuples):
  *         intervals = []
  *         for policy in tuples:             # <<<<<<<<<<<<<<
@@ -2209,7 +2413,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(PyTypeObje
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cydatemap/cydatemap.pyx":32
+  /* "cydatemap/cydatemap.pyx":46
  *             intr = DateInterval(policy[0],policy[1],lower_closed=True,upper_closed=False,lower_bounded=True,upper_bounded=True)
  *             intervals.append(intr)
  *         return cls(DateIntervalSet(DateInterval_preprocess_intervals(tuple(intervals))))             # <<<<<<<<<<<<<<
@@ -2217,32 +2421,32 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(PyTypeObje
  *     def __or__(DateMap self, other):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyList_AsTuple(__pyx_v_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_1 = PyList_AsTuple(__pyx_v_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __pyx_f_10cyinterval_10cyinterval_DateInterval_preprocess_intervals(((PyObject*)__pyx_t_1), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_3 = __pyx_f_10cyinterval_10cyinterval_DateInterval_preprocess_intervals(((PyObject*)__pyx_t_1), 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_v_cls), __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_v_cls), __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":27
+  /* "cydatemap/cydatemap.pyx":41
  * 
  *     @classmethod
  *     def from_tuples(cls, list tuples):             # <<<<<<<<<<<<<<
@@ -2267,7 +2471,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_2from_tuples(PyTypeObje
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":34
+/* "cydatemap/cydatemap.pyx":48
  *         return cls(DateIntervalSet(DateInterval_preprocess_intervals(tuple(intervals))))
  * 
  *     def __or__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2281,7 +2485,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_5__or__(PyObject *__pyx
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__or__ (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 48, __pyx_L1_error)
   __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_4__or__(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self), ((PyObject *)__pyx_v_other));
 
   /* function exit code */
@@ -2302,21 +2506,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_4__or__(struct __pyx_ob
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__or__", 0);
 
-  /* "cydatemap/cydatemap.pyx":35
+  /* "cydatemap/cydatemap.pyx":49
  * 
  *     def __or__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         return DateMap(self.intervals.union(other.intervals))
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":36
+    /* "cydatemap/cydatemap.pyx":50
  *     def __or__(DateMap self, other):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -2328,7 +2532,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_4__or__(struct __pyx_ob
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":35
+    /* "cydatemap/cydatemap.pyx":49
  * 
  *     def __or__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -2337,7 +2541,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_4__or__(struct __pyx_ob
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":37
+  /* "cydatemap/cydatemap.pyx":51
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         return DateMap(self.intervals.union(other.intervals))             # <<<<<<<<<<<<<<
@@ -2345,25 +2549,25 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_4__or__(struct __pyx_ob
  *     def __ror__(DateMap self, other):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 37, __pyx_L1_error)
-  __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->__pyx_union(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 51, __pyx_L1_error)
+  __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->__pyx_union(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_1, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_1, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":34
+  /* "cydatemap/cydatemap.pyx":48
  *         return cls(DateIntervalSet(DateInterval_preprocess_intervals(tuple(intervals))))
  * 
  *     def __or__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2383,7 +2587,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_4__or__(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":39
+/* "cydatemap/cydatemap.pyx":53
  *         return DateMap(self.intervals.union(other.intervals))
  * 
  *     def __ror__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2415,21 +2619,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("__ror__", 0);
 
-  /* "cydatemap/cydatemap.pyx":40
+  /* "cydatemap/cydatemap.pyx":54
  * 
  *     def __ror__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         return other.__or__(self)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":41
+    /* "cydatemap/cydatemap.pyx":55
  *     def __ror__(DateMap self, other):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -2441,7 +2645,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":40
+    /* "cydatemap/cydatemap.pyx":54
  * 
  *     def __ror__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -2450,7 +2654,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":42
+  /* "cydatemap/cydatemap.pyx":56
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         return other.__or__(self)             # <<<<<<<<<<<<<<
@@ -2458,7 +2662,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
  *     def __and__(DateMap self, other):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_or); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_or); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -2471,13 +2675,13 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -2485,19 +2689,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_6, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
@@ -2507,7 +2711,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":39
+  /* "cydatemap/cydatemap.pyx":53
  *         return DateMap(self.intervals.union(other.intervals))
  * 
  *     def __ror__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2529,7 +2733,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_6__ror__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":44
+/* "cydatemap/cydatemap.pyx":58
  *         return other.__or__(self)
  * 
  *     def __and__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2543,7 +2747,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_9__and__(PyObject *__py
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__and__ (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 44, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 58, __pyx_L1_error)
   __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_8__and__(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self), ((PyObject *)__pyx_v_other));
 
   /* function exit code */
@@ -2564,21 +2768,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_8__and__(struct __pyx_o
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__and__", 0);
 
-  /* "cydatemap/cydatemap.pyx":45
+  /* "cydatemap/cydatemap.pyx":59
  * 
  *     def __and__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         return DateMap(self.intervals.intersection(other.intervals))
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":46
+    /* "cydatemap/cydatemap.pyx":60
  *     def __and__(DateMap self, other):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -2590,7 +2794,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_8__and__(struct __pyx_o
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":45
+    /* "cydatemap/cydatemap.pyx":59
  * 
  *     def __and__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -2599,7 +2803,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_8__and__(struct __pyx_o
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":47
+  /* "cydatemap/cydatemap.pyx":61
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         return DateMap(self.intervals.intersection(other.intervals))             # <<<<<<<<<<<<<<
@@ -2607,25 +2811,25 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_8__and__(struct __pyx_o
  *     def __rand__(DateMap self, other):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 47, __pyx_L1_error)
-  __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->intersection(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 47, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->intersection(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_1, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_1, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":44
+  /* "cydatemap/cydatemap.pyx":58
  *         return other.__or__(self)
  * 
  *     def __and__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2645,7 +2849,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_8__and__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":49
+/* "cydatemap/cydatemap.pyx":63
  *         return DateMap(self.intervals.intersection(other.intervals))
  * 
  *     def __rand__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2677,21 +2881,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("__rand__", 0);
 
-  /* "cydatemap/cydatemap.pyx":50
+  /* "cydatemap/cydatemap.pyx":64
  * 
  *     def __rand__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         return other.__and__(self)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":51
+    /* "cydatemap/cydatemap.pyx":65
  *     def __rand__(DateMap self, other):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -2703,7 +2907,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":50
+    /* "cydatemap/cydatemap.pyx":64
  * 
  *     def __rand__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -2712,7 +2916,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":52
+  /* "cydatemap/cydatemap.pyx":66
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         return other.__and__(self)             # <<<<<<<<<<<<<<
@@ -2720,7 +2924,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
  *     def __sub__(DateMap self, other):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_and); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_and); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -2733,13 +2937,13 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -2747,19 +2951,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_6, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
@@ -2769,7 +2973,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":49
+  /* "cydatemap/cydatemap.pyx":63
  *         return DateMap(self.intervals.intersection(other.intervals))
  * 
  *     def __rand__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2791,7 +2995,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_10__rand__(struct __pyx
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":54
+/* "cydatemap/cydatemap.pyx":68
  *         return other.__and__(self)
  * 
  *     def __sub__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2805,7 +3009,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_13__sub__(PyObject *__p
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__sub__ (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 68, __pyx_L1_error)
   __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self), ((PyObject *)__pyx_v_other));
 
   /* function exit code */
@@ -2829,21 +3033,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("__sub__", 0);
 
-  /* "cydatemap/cydatemap.pyx":55
+  /* "cydatemap/cydatemap.pyx":69
  * 
  *     def __sub__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         return self.__class__(self.intervals.minus(other.intervals))
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":56
+    /* "cydatemap/cydatemap.pyx":70
  *     def __sub__(DateMap self, other):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -2855,7 +3059,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":55
+    /* "cydatemap/cydatemap.pyx":69
  * 
  *     def __sub__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -2864,7 +3068,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":57
+  /* "cydatemap/cydatemap.pyx":71
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         return self.__class__(self.intervals.minus(other.intervals))             # <<<<<<<<<<<<<<
@@ -2872,12 +3076,12 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
  *     def __rsub__(DateMap self, other):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_class); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_class); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 57, __pyx_L1_error)
-  __pyx_t_6 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->minus(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_5), 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 57, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_6 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->minus(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_5), 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -2891,14 +3095,14 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_6};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -2907,20 +3111,20 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_6};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else
     #endif
     {
-      __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 57, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_6);
       PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_t_6);
       __pyx_t_6 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
@@ -2930,7 +3134,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":54
+  /* "cydatemap/cydatemap.pyx":68
  *         return other.__and__(self)
  * 
  *     def __sub__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2953,7 +3157,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_12__sub__(struct __pyx_
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":59
+/* "cydatemap/cydatemap.pyx":73
  *         return self.__class__(self.intervals.minus(other.intervals))
  * 
  *     def __rsub__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -2985,21 +3189,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("__rsub__", 0);
 
-  /* "cydatemap/cydatemap.pyx":60
+  /* "cydatemap/cydatemap.pyx":74
  * 
  *     def __rsub__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         return other.__sub__(self)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":61
+    /* "cydatemap/cydatemap.pyx":75
  *     def __rsub__(DateMap self, other):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -3011,7 +3215,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":60
+    /* "cydatemap/cydatemap.pyx":74
  * 
  *     def __rsub__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -3020,7 +3224,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":62
+  /* "cydatemap/cydatemap.pyx":76
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         return other.__sub__(self)             # <<<<<<<<<<<<<<
@@ -3028,7 +3232,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
  *     def __invert__(DateMap self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_sub); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_sub); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -3041,13 +3245,13 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -3055,19 +3259,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 62, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_6, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
@@ -3077,7 +3281,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":59
+  /* "cydatemap/cydatemap.pyx":73
  *         return self.__class__(self.intervals.minus(other.intervals))
  * 
  *     def __rsub__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -3099,7 +3303,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_14__rsub__(struct __pyx
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":64
+/* "cydatemap/cydatemap.pyx":78
  *         return other.__sub__(self)
  * 
  *     def __invert__(DateMap self):             # <<<<<<<<<<<<<<
@@ -3127,7 +3331,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_16__invert__(struct __p
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__invert__", 0);
 
-  /* "cydatemap/cydatemap.pyx":65
+  /* "cydatemap/cydatemap.pyx":79
  * 
  *     def __invert__(DateMap self):
  *         return DateMap(self.intervals.complement())             # <<<<<<<<<<<<<<
@@ -3135,21 +3339,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_16__invert__(struct __p
  *     def __richcmp__(DateMap self, other, int op):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->complement(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->complement(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":64
+  /* "cydatemap/cydatemap.pyx":78
  *         return other.__sub__(self)
  * 
  *     def __invert__(DateMap self):             # <<<<<<<<<<<<<<
@@ -3169,7 +3373,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_16__invert__(struct __p
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":67
+/* "cydatemap/cydatemap.pyx":81
  *         return DateMap(self.intervals.complement())
  * 
  *     def __richcmp__(DateMap self, other, int op):             # <<<<<<<<<<<<<<
@@ -3183,7 +3387,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_19__richcmp__(PyObject 
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__richcmp__ (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 67, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_self), __pyx_ptype_9cydatemap_9cydatemap_DateMap, 1, "self", 0))) __PYX_ERR(0, 81, __pyx_L1_error)
   __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self), ((PyObject *)__pyx_v_other), ((int)__pyx_v_op));
 
   /* function exit code */
@@ -3204,21 +3408,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__richcmp__", 0);
 
-  /* "cydatemap/cydatemap.pyx":68
+  /* "cydatemap/cydatemap.pyx":82
  * 
  *     def __richcmp__(DateMap self, other, int op):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         if op == 2:
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":69
+    /* "cydatemap/cydatemap.pyx":83
  *     def __richcmp__(DateMap self, other, int op):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -3230,7 +3434,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":68
+    /* "cydatemap/cydatemap.pyx":82
  * 
  *     def __richcmp__(DateMap self, other, int op):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -3239,7 +3443,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":70
+  /* "cydatemap/cydatemap.pyx":84
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         if op == 2:             # <<<<<<<<<<<<<<
@@ -3249,7 +3453,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
   __pyx_t_3 = ((__pyx_v_op == 2) != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":71
+    /* "cydatemap/cydatemap.pyx":85
  *             return NotImplemented
  *         if op == 2:
  *             return self.intervals.equal(other.intervals)             # <<<<<<<<<<<<<<
@@ -3257,17 +3461,17 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
  * 
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_intervals); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 71, __pyx_L1_error)
-    __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->equal(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet))))) __PYX_ERR(0, 85, __pyx_L1_error)
+    __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->equal(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 85, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_r = __pyx_t_4;
     __pyx_t_4 = 0;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":70
+    /* "cydatemap/cydatemap.pyx":84
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         if op == 2:             # <<<<<<<<<<<<<<
@@ -3276,7 +3480,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":72
+  /* "cydatemap/cydatemap.pyx":86
  *         if op == 2:
  *             return self.intervals.equal(other.intervals)
  *         return NotImplemented             # <<<<<<<<<<<<<<
@@ -3288,7 +3492,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
   __pyx_r = __pyx_builtin_NotImplemented;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":67
+  /* "cydatemap/cydatemap.pyx":81
  *         return DateMap(self.intervals.complement())
  * 
  *     def __richcmp__(DateMap self, other, int op):             # <<<<<<<<<<<<<<
@@ -3308,7 +3512,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_18__richcmp__(struct __
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":74
+/* "cydatemap/cydatemap.pyx":88
  *         return NotImplemented
  * 
  *     def __req__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -3340,21 +3544,21 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("__req__", 0);
 
-  /* "cydatemap/cydatemap.pyx":75
+  /* "cydatemap/cydatemap.pyx":89
  * 
  *     def __req__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
  *             return NotImplemented
  *         return other.__eq__(self)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_class); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = (__pyx_t_1 != ((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "cydatemap/cydatemap.pyx":76
+    /* "cydatemap/cydatemap.pyx":90
  *     def __req__(DateMap self, other):
  *         if other.__class__ is not DateMap:
  *             return NotImplemented             # <<<<<<<<<<<<<<
@@ -3366,7 +3570,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
     __pyx_r = __pyx_builtin_NotImplemented;
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":75
+    /* "cydatemap/cydatemap.pyx":89
  * 
  *     def __req__(DateMap self, other):
  *         if other.__class__ is not DateMap:             # <<<<<<<<<<<<<<
@@ -3375,7 +3579,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":77
+  /* "cydatemap/cydatemap.pyx":91
  *         if other.__class__ is not DateMap:
  *             return NotImplemented
  *         return other.__eq__(self)             # <<<<<<<<<<<<<<
@@ -3383,7 +3587,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
  *     def __contains__(DateMap self, date date):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_eq); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_other, __pyx_n_s_eq); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -3396,13 +3600,13 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -3410,19 +3614,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, ((PyObject *)__pyx_v_self)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
       PyTuple_SET_ITEM(__pyx_t_6, 0+1, ((PyObject *)__pyx_v_self));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
@@ -3432,7 +3636,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":74
+  /* "cydatemap/cydatemap.pyx":88
  *         return NotImplemented
  * 
  *     def __req__(DateMap self, other):             # <<<<<<<<<<<<<<
@@ -3454,7 +3658,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_20__req__(struct __pyx_
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":79
+/* "cydatemap/cydatemap.pyx":93
  *         return other.__eq__(self)
  * 
  *     def __contains__(DateMap self, date date):             # <<<<<<<<<<<<<<
@@ -3468,7 +3672,7 @@ static int __pyx_pw_9cydatemap_9cydatemap_7DateMap_23__contains__(PyObject *__py
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__contains__ (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_date), __pyx_ptype_7cpython_8datetime_date, 1, "date", 0))) __PYX_ERR(0, 79, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_date), __pyx_ptype_7cpython_8datetime_date, 1, "date", 0))) __PYX_ERR(0, 93, __pyx_L1_error)
   __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_22__contains__(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self), ((PyDateTime_Date *)__pyx_v_date));
 
   /* function exit code */
@@ -3487,21 +3691,21 @@ static int __pyx_pf_9cydatemap_9cydatemap_7DateMap_22__contains__(struct __pyx_o
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("__contains__", 0);
 
-  /* "cydatemap/cydatemap.pyx":80
+  /* "cydatemap/cydatemap.pyx":94
  * 
  *     def __contains__(DateMap self, date date):
  *         return self.intervals.contains(date)             # <<<<<<<<<<<<<<
  * 
  *     def truncate(DateMap self, lower=None, upper=None):
  */
-  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->contains(__pyx_v_self->intervals, __pyx_v_date, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->contains(__pyx_v_self->intervals, __pyx_v_date, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":79
+  /* "cydatemap/cydatemap.pyx":93
  *         return other.__eq__(self)
  * 
  *     def __contains__(DateMap self, date date):             # <<<<<<<<<<<<<<
@@ -3519,7 +3723,7 @@ static int __pyx_pf_9cydatemap_9cydatemap_7DateMap_22__contains__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":82
+/* "cydatemap/cydatemap.pyx":96
  *         return self.intervals.contains(date)
  * 
  *     def truncate(DateMap self, lower=None, upper=None):             # <<<<<<<<<<<<<<
@@ -3567,7 +3771,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_25truncate(PyObject *__
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "truncate") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "truncate") < 0)) __PYX_ERR(0, 96, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3584,7 +3788,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_25truncate(PyObject *__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("truncate", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("truncate", 0, 0, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 96, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cydatemap.cydatemap.DateMap.truncate", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3608,7 +3812,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("truncate", 0);
 
-  /* "cydatemap/cydatemap.pyx":85
+  /* "cydatemap/cydatemap.pyx":99
  *         '''Return a copy truncated above and/or below.'''
  *         cdef DateInterval interval
  *         if lower is not None:             # <<<<<<<<<<<<<<
@@ -3619,7 +3823,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "cydatemap/cydatemap.pyx":86
+    /* "cydatemap/cydatemap.pyx":100
  *         cdef DateInterval interval
  *         if lower is not None:
  *             if upper is not None:             # <<<<<<<<<<<<<<
@@ -3630,14 +3834,14 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
     __pyx_t_1 = (__pyx_t_2 != 0);
     if (__pyx_t_1) {
 
-      /* "cydatemap/cydatemap.pyx":87
+      /* "cydatemap/cydatemap.pyx":101
  *         if lower is not None:
  *             if upper is not None:
  *                 interval = DateInterval(lower, upper, lower_closed=True, upper_closed=False, lower_bounded=True, upper_bounded=True)             # <<<<<<<<<<<<<<
  *             else:
  *                 interval = DateInterval(lower, lower, lower_closed=True, upper_closed=False, lower_bounded=True, upper_bounded=False)
  */
-      __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_v_lower);
       __Pyx_GIVEREF(__pyx_v_lower);
@@ -3645,20 +3849,20 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
       __Pyx_INCREF(__pyx_v_upper);
       __Pyx_GIVEREF(__pyx_v_upper);
       PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_upper);
-      __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 87, __pyx_L1_error)
+      __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_True) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_True) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 87, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_True) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_True) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 101, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_v_interval = ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "cydatemap/cydatemap.pyx":86
+      /* "cydatemap/cydatemap.pyx":100
  *         cdef DateInterval interval
  *         if lower is not None:
  *             if upper is not None:             # <<<<<<<<<<<<<<
@@ -3668,7 +3872,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
       goto __pyx_L4;
     }
 
-    /* "cydatemap/cydatemap.pyx":89
+    /* "cydatemap/cydatemap.pyx":103
  *                 interval = DateInterval(lower, upper, lower_closed=True, upper_closed=False, lower_bounded=True, upper_bounded=True)
  *             else:
  *                 interval = DateInterval(lower, lower, lower_closed=True, upper_closed=False, lower_bounded=True, upper_bounded=False)             # <<<<<<<<<<<<<<
@@ -3676,7 +3880,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
  *             if upper is not None:
  */
     /*else*/ {
-      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 89, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_v_lower);
       __Pyx_GIVEREF(__pyx_v_lower);
@@ -3684,13 +3888,13 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
       __Pyx_INCREF(__pyx_v_lower);
       __Pyx_GIVEREF(__pyx_v_lower);
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_lower);
-      __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 89, __pyx_L1_error)
+      __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 89, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 89, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_True) < 0) __PYX_ERR(0, 89, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_False) < 0) __PYX_ERR(0, 89, __pyx_L1_error)
-      __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 89, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_True) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_False) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 103, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -3699,7 +3903,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
     }
     __pyx_L4:;
 
-    /* "cydatemap/cydatemap.pyx":85
+    /* "cydatemap/cydatemap.pyx":99
  *         '''Return a copy truncated above and/or below.'''
  *         cdef DateInterval interval
  *         if lower is not None:             # <<<<<<<<<<<<<<
@@ -3709,7 +3913,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
     goto __pyx_L3;
   }
 
-  /* "cydatemap/cydatemap.pyx":91
+  /* "cydatemap/cydatemap.pyx":105
  *                 interval = DateInterval(lower, lower, lower_closed=True, upper_closed=False, lower_bounded=True, upper_bounded=False)
  *         else:
  *             if upper is not None:             # <<<<<<<<<<<<<<
@@ -3721,14 +3925,14 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
     __pyx_t_2 = (__pyx_t_1 != 0);
     if (__pyx_t_2) {
 
-      /* "cydatemap/cydatemap.pyx":92
+      /* "cydatemap/cydatemap.pyx":106
  *         else:
  *             if upper is not None:
  *                 interval = DateInterval(upper, upper, lower_closed=True, upper_closed=False, lower_bounded=False, upper_bounded=True)             # <<<<<<<<<<<<<<
  *             else:
  *                 return self
  */
-      __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_v_upper);
       __Pyx_GIVEREF(__pyx_v_upper);
@@ -3736,20 +3940,20 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
       __Pyx_INCREF(__pyx_v_upper);
       __Pyx_GIVEREF(__pyx_v_upper);
       PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_upper);
-      __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 92, __pyx_L1_error)
+      __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_False) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_True) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 92, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_closed, Py_True) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_closed, Py_False) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_lower_bounded, Py_False) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_upper_bounded, Py_True) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_v_interval = ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "cydatemap/cydatemap.pyx":91
+      /* "cydatemap/cydatemap.pyx":105
  *                 interval = DateInterval(lower, lower, lower_closed=True, upper_closed=False, lower_bounded=True, upper_bounded=False)
  *         else:
  *             if upper is not None:             # <<<<<<<<<<<<<<
@@ -3759,7 +3963,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
       goto __pyx_L5;
     }
 
-    /* "cydatemap/cydatemap.pyx":94
+    /* "cydatemap/cydatemap.pyx":108
  *                 interval = DateInterval(upper, upper, lower_closed=True, upper_closed=False, lower_bounded=False, upper_bounded=True)
  *             else:
  *                 return self             # <<<<<<<<<<<<<<
@@ -3776,7 +3980,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
   }
   __pyx_L3:;
 
-  /* "cydatemap/cydatemap.pyx":95
+  /* "cydatemap/cydatemap.pyx":109
  *             else:
  *                 return self
  *         return DateMap(self.intervals.intersection(DateIntervalSet((interval,))))             # <<<<<<<<<<<<<<
@@ -3784,35 +3988,35 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
  *     def __len__(DateMap self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(((PyObject *)__pyx_v_interval));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_interval));
   PyTuple_SET_ITEM(__pyx_t_5, 0, ((PyObject *)__pyx_v_interval));
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5);
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_4, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_4, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->intersection(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_5), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_4 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->intersection(__pyx_v_self->intervals, ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_5), 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":82
+  /* "cydatemap/cydatemap.pyx":96
  *         return self.intervals.contains(date)
  * 
  *     def truncate(DateMap self, lower=None, upper=None):             # <<<<<<<<<<<<<<
@@ -3834,7 +4038,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_24truncate(struct __pyx
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":97
+/* "cydatemap/cydatemap.pyx":111
  *         return DateMap(self.intervals.intersection(DateIntervalSet((interval,))))
  * 
  *     def __len__(DateMap self):             # <<<<<<<<<<<<<<
@@ -3862,7 +4066,7 @@ static Py_ssize_t __pyx_pf_9cydatemap_9cydatemap_7DateMap_26__len__(struct __pyx
   Py_ssize_t __pyx_t_2;
   __Pyx_RefNannySetupContext("__len__", 0);
 
-  /* "cydatemap/cydatemap.pyx":98
+  /* "cydatemap/cydatemap.pyx":112
  * 
  *     def __len__(DateMap self):
  *         return len(self.intervals.intervals)             # <<<<<<<<<<<<<<
@@ -3873,14 +4077,14 @@ static Py_ssize_t __pyx_pf_9cydatemap_9cydatemap_7DateMap_26__len__(struct __pyx
   __Pyx_INCREF(__pyx_t_1);
   if (unlikely(__pyx_t_1 == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 98, __pyx_L1_error)
+    __PYX_ERR(0, 112, __pyx_L1_error)
   }
-  __pyx_t_2 = PyTuple_GET_SIZE(__pyx_t_1); if (unlikely(__pyx_t_2 == -1)) __PYX_ERR(0, 98, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_GET_SIZE(__pyx_t_1); if (unlikely(__pyx_t_2 == -1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":97
+  /* "cydatemap/cydatemap.pyx":111
  *         return DateMap(self.intervals.intersection(DateIntervalSet((interval,))))
  * 
  *     def __len__(DateMap self):             # <<<<<<<<<<<<<<
@@ -3898,7 +4102,7 @@ static Py_ssize_t __pyx_pf_9cydatemap_9cydatemap_7DateMap_26__len__(struct __pyx
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":100
+/* "cydatemap/cydatemap.pyx":114
  *         return len(self.intervals.intervals)
  * 
  *     def delta_of(DateMap self, date date):             # <<<<<<<<<<<<<<
@@ -3912,7 +4116,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_29delta_of(PyObject *__
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("delta_of (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_date), __pyx_ptype_7cpython_8datetime_date, 1, "date", 0))) __PYX_ERR(0, 100, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_date), __pyx_ptype_7cpython_8datetime_date, 1, "date", 0))) __PYX_ERR(0, 114, __pyx_L1_error)
   __pyx_r = __pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(((struct __pyx_obj_9cydatemap_9cydatemap_DateMap *)__pyx_v_self), ((PyDateTime_Date *)__pyx_v_date));
 
   /* function exit code */
@@ -3939,41 +4143,41 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("delta_of", 0);
 
-  /* "cydatemap/cydatemap.pyx":101
+  /* "cydatemap/cydatemap.pyx":115
  * 
  *     def delta_of(DateMap self, date date):
  *         if date not in self:             # <<<<<<<<<<<<<<
  *             raise ValueError('%s not in %s' % (str(date), str(self.intervals)))
  *         if not self.intervals.lower_bounded():
  */
-  __pyx_t_1 = (__Pyx_PySequence_ContainsTF(((PyObject *)__pyx_v_date), ((PyObject *)__pyx_v_self), Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PySequence_ContainsTF(((PyObject *)__pyx_v_date), ((PyObject *)__pyx_v_self), Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 115, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "cydatemap/cydatemap.pyx":102
+    /* "cydatemap/cydatemap.pyx":116
  *     def delta_of(DateMap self, date date):
  *         if date not in self:
  *             raise ValueError('%s not in %s' % (str(date), str(self.intervals)))             # <<<<<<<<<<<<<<
  *         if not self.intervals.lower_bounded():
  *             raise ValueError('%s not bounded below' % str(self.intervals))
  */
-    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(((PyObject *)__pyx_v_date));
     __Pyx_GIVEREF(((PyObject *)__pyx_v_date));
     PyTuple_SET_ITEM(__pyx_t_3, 0, ((PyObject *)__pyx_v_date));
-    __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(((PyObject *)__pyx_v_self->intervals));
     __Pyx_GIVEREF(((PyObject *)__pyx_v_self->intervals));
     PyTuple_SET_ITEM(__pyx_t_3, 0, ((PyObject *)__pyx_v_self->intervals));
-    __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_4);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
@@ -3981,22 +4185,22 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
     PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_5);
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_not_in_s, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_not_in_s, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 116, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(__pyx_t_5, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __PYX_ERR(0, 102, __pyx_L1_error)
+    __PYX_ERR(0, 116, __pyx_L1_error)
 
-    /* "cydatemap/cydatemap.pyx":101
+    /* "cydatemap/cydatemap.pyx":115
  * 
  *     def delta_of(DateMap self, date date):
  *         if date not in self:             # <<<<<<<<<<<<<<
@@ -4005,51 +4209,51 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":103
+  /* "cydatemap/cydatemap.pyx":117
  *         if date not in self:
  *             raise ValueError('%s not in %s' % (str(date), str(self.intervals)))
  *         if not self.intervals.lower_bounded():             # <<<<<<<<<<<<<<
  *             raise ValueError('%s not bounded below' % str(self.intervals))
  *         cdef int result = 0
  */
-  __pyx_t_5 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->lower_bounded(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_5 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->lower_bounded(__pyx_v_self->intervals, 0)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_1 = ((!__pyx_t_2) != 0);
   if (__pyx_t_1) {
 
-    /* "cydatemap/cydatemap.pyx":104
+    /* "cydatemap/cydatemap.pyx":118
  *             raise ValueError('%s not in %s' % (str(date), str(self.intervals)))
  *         if not self.intervals.lower_bounded():
  *             raise ValueError('%s not bounded below' % str(self.intervals))             # <<<<<<<<<<<<<<
  *         cdef int result = 0
  *         cdef DateInterval intr
  */
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(((PyObject *)__pyx_v_self->intervals));
     __Pyx_GIVEREF(((PyObject *)__pyx_v_self->intervals));
     PyTuple_SET_ITEM(__pyx_t_5, 0, ((PyObject *)__pyx_v_self->intervals));
-    __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_not_bounded_below, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_not_bounded_below, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_3, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 118, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(__pyx_t_5, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __PYX_ERR(0, 104, __pyx_L1_error)
+    __PYX_ERR(0, 118, __pyx_L1_error)
 
-    /* "cydatemap/cydatemap.pyx":103
+    /* "cydatemap/cydatemap.pyx":117
  *         if date not in self:
  *             raise ValueError('%s not in %s' % (str(date), str(self.intervals)))
  *         if not self.intervals.lower_bounded():             # <<<<<<<<<<<<<<
@@ -4058,7 +4262,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":105
+  /* "cydatemap/cydatemap.pyx":119
  *         if not self.intervals.lower_bounded():
  *             raise ValueError('%s not bounded below' % str(self.intervals))
  *         cdef int result = 0             # <<<<<<<<<<<<<<
@@ -4067,7 +4271,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
   __pyx_v_result = 0;
 
-  /* "cydatemap/cydatemap.pyx":107
+  /* "cydatemap/cydatemap.pyx":121
  *         cdef int result = 0
  *         cdef DateInterval intr
  *         for intr in self.intervals.intervals:             # <<<<<<<<<<<<<<
@@ -4076,34 +4280,34 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
   if (unlikely(__pyx_v_self->intervals->__pyx_base.intervals == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 107, __pyx_L1_error)
+    __PYX_ERR(0, 121, __pyx_L1_error)
   }
   __pyx_t_5 = __pyx_v_self->intervals->__pyx_base.intervals; __Pyx_INCREF(__pyx_t_5); __pyx_t_6 = 0;
   for (;;) {
     if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 107, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 121, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 121, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 107, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 121, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_intr, ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "cydatemap/cydatemap.pyx":108
+    /* "cydatemap/cydatemap.pyx":122
  *         cdef DateInterval intr
  *         for intr in self.intervals.intervals:
  *             if date < intr.lower_bound:             # <<<<<<<<<<<<<<
  *                 break
  *             if intr.contains(date):
  */
-    __pyx_t_3 = PyObject_RichCompare(((PyObject *)__pyx_v_date), ((PyObject *)__pyx_v_intr->lower_bound), Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 108, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(((PyObject *)__pyx_v_date), ((PyObject *)__pyx_v_intr->lower_bound), Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 122, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 122, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_1) {
 
-      /* "cydatemap/cydatemap.pyx":109
+      /* "cydatemap/cydatemap.pyx":123
  *         for intr in self.intervals.intervals:
  *             if date < intr.lower_bound:
  *                 break             # <<<<<<<<<<<<<<
@@ -4112,7 +4316,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
       goto __pyx_L6_break;
 
-      /* "cydatemap/cydatemap.pyx":108
+      /* "cydatemap/cydatemap.pyx":122
  *         cdef DateInterval intr
  *         for intr in self.intervals.intervals:
  *             if date < intr.lower_bound:             # <<<<<<<<<<<<<<
@@ -4121,53 +4325,53 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
     }
 
-    /* "cydatemap/cydatemap.pyx":110
+    /* "cydatemap/cydatemap.pyx":124
  *             if date < intr.lower_bound:
  *                 break
  *             if intr.contains(date):             # <<<<<<<<<<<<<<
  *                 result += (date - intr.lower_bound).days
  *                 if not intr.lower_closed:
  */
-    __pyx_t_3 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval *)__pyx_v_intr->__pyx_vtab)->contains(__pyx_v_intr, __pyx_v_date, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
+    __pyx_t_3 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval *)__pyx_v_intr->__pyx_vtab)->contains(__pyx_v_intr, __pyx_v_date, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 124, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 110, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 124, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_1) {
 
-      /* "cydatemap/cydatemap.pyx":111
+      /* "cydatemap/cydatemap.pyx":125
  *                 break
  *             if intr.contains(date):
  *                 result += (date - intr.lower_bound).days             # <<<<<<<<<<<<<<
  *                 if not intr.lower_closed:
  *                     result -= 1
  */
-      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_result); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_result); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 125, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = PyNumber_Subtract(((PyObject *)__pyx_v_date), ((PyObject *)__pyx_v_intr->lower_bound)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __pyx_t_4 = PyNumber_Subtract(((PyObject *)__pyx_v_date), ((PyObject *)__pyx_v_intr->lower_bound)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 125, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_days); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_days); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 125, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyNumber_InPlaceAdd(__pyx_t_3, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+      __pyx_t_4 = PyNumber_InPlaceAdd(__pyx_t_3, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 125, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 125, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_v_result = __pyx_t_8;
 
-      /* "cydatemap/cydatemap.pyx":112
+      /* "cydatemap/cydatemap.pyx":126
  *             if intr.contains(date):
  *                 result += (date - intr.lower_bound).days
  *                 if not intr.lower_closed:             # <<<<<<<<<<<<<<
  *                     result -= 1
  *             elif intr.upper_bounded:
  */
-      __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_intr->__pyx_base.lower_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 112, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_intr->__pyx_base.lower_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 126, __pyx_L1_error)
       __pyx_t_2 = ((!__pyx_t_1) != 0);
       if (__pyx_t_2) {
 
-        /* "cydatemap/cydatemap.pyx":113
+        /* "cydatemap/cydatemap.pyx":127
  *                 result += (date - intr.lower_bound).days
  *                 if not intr.lower_closed:
  *                     result -= 1             # <<<<<<<<<<<<<<
@@ -4176,7 +4380,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
         __pyx_v_result = (__pyx_v_result - 1);
 
-        /* "cydatemap/cydatemap.pyx":112
+        /* "cydatemap/cydatemap.pyx":126
  *             if intr.contains(date):
  *                 result += (date - intr.lower_bound).days
  *                 if not intr.lower_closed:             # <<<<<<<<<<<<<<
@@ -4185,7 +4389,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
       }
 
-      /* "cydatemap/cydatemap.pyx":110
+      /* "cydatemap/cydatemap.pyx":124
  *             if date < intr.lower_bound:
  *                 break
  *             if intr.contains(date):             # <<<<<<<<<<<<<<
@@ -4195,17 +4399,17 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
       goto __pyx_L8;
     }
 
-    /* "cydatemap/cydatemap.pyx":114
+    /* "cydatemap/cydatemap.pyx":128
  *                 if not intr.lower_closed:
  *                     result -= 1
  *             elif intr.upper_bounded:             # <<<<<<<<<<<<<<
  *                 result += measure(intr)
  *             else:
  */
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_intr->__pyx_base.upper_bounded)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_intr->__pyx_base.upper_bounded)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
     if (__pyx_t_2) {
 
-      /* "cydatemap/cydatemap.pyx":115
+      /* "cydatemap/cydatemap.pyx":129
  *                     result -= 1
  *             elif intr.upper_bounded:
  *                 result += measure(intr)             # <<<<<<<<<<<<<<
@@ -4214,7 +4418,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  */
       __pyx_v_result = (__pyx_v_result + __pyx_f_9cydatemap_9cydatemap_measure(__pyx_v_intr));
 
-      /* "cydatemap/cydatemap.pyx":114
+      /* "cydatemap/cydatemap.pyx":128
  *                 if not intr.lower_closed:
  *                     result -= 1
  *             elif intr.upper_bounded:             # <<<<<<<<<<<<<<
@@ -4224,7 +4428,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
       goto __pyx_L8;
     }
 
-    /* "cydatemap/cydatemap.pyx":117
+    /* "cydatemap/cydatemap.pyx":131
  *                 result += measure(intr)
  *             else:
  *                 raise ValueError('This line should never be reached.  There is a bug in cydatemap.')             # <<<<<<<<<<<<<<
@@ -4232,15 +4436,15 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  * 
  */
     /*else*/ {
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_Raise(__pyx_t_4, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __PYX_ERR(0, 117, __pyx_L1_error)
+      __PYX_ERR(0, 131, __pyx_L1_error)
     }
     __pyx_L8:;
 
-    /* "cydatemap/cydatemap.pyx":107
+    /* "cydatemap/cydatemap.pyx":121
  *         cdef int result = 0
  *         cdef DateInterval intr
  *         for intr in self.intervals.intervals:             # <<<<<<<<<<<<<<
@@ -4251,7 +4455,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
   __pyx_L6_break:;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cydatemap/cydatemap.pyx":118
+  /* "cydatemap/cydatemap.pyx":132
  *             else:
  *                 raise ValueError('This line should never be reached.  There is a bug in cydatemap.')
  *         return timedelta(days=result)             # <<<<<<<<<<<<<<
@@ -4259,20 +4463,20 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
  *     def date_of(DateMap self, int day):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_result); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_days, __pyx_t_4) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_days, __pyx_t_4) < 0) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7cpython_8datetime_timedelta), __pyx_empty_tuple, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7cpython_8datetime_timedelta), __pyx_empty_tuple, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":100
+  /* "cydatemap/cydatemap.pyx":114
  *         return len(self.intervals.intervals)
  * 
  *     def delta_of(DateMap self, date date):             # <<<<<<<<<<<<<<
@@ -4295,7 +4499,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_28delta_of(struct __pyx
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":120
+/* "cydatemap/cydatemap.pyx":134
  *         return timedelta(days=result)
  * 
  *     def date_of(DateMap self, int day):             # <<<<<<<<<<<<<<
@@ -4311,7 +4515,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_31date_of(PyObject *__p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("date_of (wrapper)", 0);
   assert(__pyx_arg_day); {
-    __pyx_v_day = __Pyx_PyInt_As_int(__pyx_arg_day); if (unlikely((__pyx_v_day == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 120, __pyx_L3_error)
+    __pyx_v_day = __Pyx_PyInt_As_int(__pyx_arg_day); if (unlikely((__pyx_v_day == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 134, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4345,7 +4549,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("date_of", 0);
 
-  /* "cydatemap/cydatemap.pyx":121
+  /* "cydatemap/cydatemap.pyx":135
  * 
  *     def date_of(DateMap self, int day):
  *         cdef int period = self.period             # <<<<<<<<<<<<<<
@@ -4355,7 +4559,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
   __pyx_t_1 = __pyx_v_self->period;
   __pyx_v_period = __pyx_t_1;
 
-  /* "cydatemap/cydatemap.pyx":122
+  /* "cydatemap/cydatemap.pyx":136
  *     def date_of(DateMap self, int day):
  *         cdef int period = self.period
  *         if day >= period or day < -1*period:             # <<<<<<<<<<<<<<
@@ -4373,7 +4577,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_2) {
 
-    /* "cydatemap/cydatemap.pyx":123
+    /* "cydatemap/cydatemap.pyx":137
  *         cdef int period = self.period
  *         if day >= period or day < -1*period:
  *             raise IndexError             # <<<<<<<<<<<<<<
@@ -4381,9 +4585,9 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  *             day = day % period
  */
     __Pyx_Raise(__pyx_builtin_IndexError, 0, 0, 0);
-    __PYX_ERR(0, 123, __pyx_L1_error)
+    __PYX_ERR(0, 137, __pyx_L1_error)
 
-    /* "cydatemap/cydatemap.pyx":122
+    /* "cydatemap/cydatemap.pyx":136
  *     def date_of(DateMap self, int day):
  *         cdef int period = self.period
  *         if day >= period or day < -1*period:             # <<<<<<<<<<<<<<
@@ -4392,7 +4596,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":124
+  /* "cydatemap/cydatemap.pyx":138
  *         if day >= period or day < -1*period:
  *             raise IndexError
  *         if day < 0:             # <<<<<<<<<<<<<<
@@ -4402,7 +4606,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
   __pyx_t_2 = ((__pyx_v_day < 0) != 0);
   if (__pyx_t_2) {
 
-    /* "cydatemap/cydatemap.pyx":125
+    /* "cydatemap/cydatemap.pyx":139
  *             raise IndexError
  *         if day < 0:
  *             day = day % period             # <<<<<<<<<<<<<<
@@ -4411,11 +4615,11 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  */
     if (unlikely(__pyx_v_period == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-      __PYX_ERR(0, 125, __pyx_L1_error)
+      __PYX_ERR(0, 139, __pyx_L1_error)
     }
     __pyx_v_day = __Pyx_mod_int(__pyx_v_day, __pyx_v_period);
 
-    /* "cydatemap/cydatemap.pyx":124
+    /* "cydatemap/cydatemap.pyx":138
  *         if day >= period or day < -1*period:
  *             raise IndexError
  *         if day < 0:             # <<<<<<<<<<<<<<
@@ -4424,19 +4628,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":126
+  /* "cydatemap/cydatemap.pyx":140
  *         if day < 0:
  *             day = day % period
  *         remaining = day             # <<<<<<<<<<<<<<
  *         cdef DateInterval intr
  *         for intr in self.intervals:
  */
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_day); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_day); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_remaining = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "cydatemap/cydatemap.pyx":128
+  /* "cydatemap/cydatemap.pyx":142
  *         remaining = day
  *         cdef DateInterval intr
  *         for intr in self.intervals:             # <<<<<<<<<<<<<<
@@ -4447,26 +4651,26 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
     __pyx_t_4 = ((PyObject *)__pyx_v_self->intervals); __Pyx_INCREF(__pyx_t_4); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_self->intervals)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_self->intervals)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 142, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 142, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_6)) {
       if (likely(PyList_CheckExact(__pyx_t_4))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_4)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_7 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
+        __pyx_t_7 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 142, __pyx_L1_error)
         #else
-        __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
+        __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 142, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_7 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 142, __pyx_L1_error)
         #else
-        __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
+        __pyx_t_7 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 142, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         #endif
       }
@@ -4476,30 +4680,30 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 128, __pyx_L1_error)
+          else __PYX_ERR(0, 142, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_7);
     }
-    if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 128, __pyx_L1_error)
+    if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 142, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_intr, ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_7));
     __pyx_t_7 = 0;
 
-    /* "cydatemap/cydatemap.pyx":129
+    /* "cydatemap/cydatemap.pyx":143
  *         cdef DateInterval intr
  *         for intr in self.intervals:
  *             if intr.empty():             # <<<<<<<<<<<<<<
  *                 continue
  *             result = intr.lower_bound if intr.lower_closed else intr.lower_bound + timedelta(days=1)
  */
-    __pyx_t_7 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval *)__pyx_v_intr->__pyx_vtab)->empty(__pyx_v_intr, 0)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 129, __pyx_L1_error)
+    __pyx_t_7 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval *)__pyx_v_intr->__pyx_vtab)->empty(__pyx_v_intr, 0)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 129, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     if (__pyx_t_2) {
 
-      /* "cydatemap/cydatemap.pyx":130
+      /* "cydatemap/cydatemap.pyx":144
  *         for intr in self.intervals:
  *             if intr.empty():
  *                 continue             # <<<<<<<<<<<<<<
@@ -4508,7 +4712,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  */
       goto __pyx_L7_continue;
 
-      /* "cydatemap/cydatemap.pyx":129
+      /* "cydatemap/cydatemap.pyx":143
  *         cdef DateInterval intr
  *         for intr in self.intervals:
  *             if intr.empty():             # <<<<<<<<<<<<<<
@@ -4517,25 +4721,25 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  */
     }
 
-    /* "cydatemap/cydatemap.pyx":131
+    /* "cydatemap/cydatemap.pyx":145
  *             if intr.empty():
  *                 continue
  *             result = intr.lower_bound if intr.lower_closed else intr.lower_bound + timedelta(days=1)             # <<<<<<<<<<<<<<
  *             duration = measure(intr)
  *             if remaining < duration:
  */
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_intr->__pyx_base.lower_closed)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 131, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_intr->__pyx_base.lower_closed)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 145, __pyx_L1_error)
     if (__pyx_t_2) {
       __Pyx_INCREF(((PyObject *)__pyx_v_intr->lower_bound));
       __pyx_t_7 = ((PyObject *)__pyx_v_intr->lower_bound);
     } else {
-      __pyx_t_8 = PyDict_New(); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 131, __pyx_L1_error)
+      __pyx_t_8 = PyDict_New(); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_days, __pyx_int_1) < 0) __PYX_ERR(0, 131, __pyx_L1_error)
-      __pyx_t_9 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7cpython_8datetime_timedelta), __pyx_empty_tuple, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 131, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_days, __pyx_int_1) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7cpython_8datetime_timedelta), __pyx_empty_tuple, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_8 = PyNumber_Add(((PyObject *)__pyx_v_intr->lower_bound), __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 131, __pyx_L1_error)
+      __pyx_t_8 = PyNumber_Add(((PyObject *)__pyx_v_intr->lower_bound), __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_7 = __pyx_t_8;
@@ -4544,50 +4748,50 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
     __Pyx_XDECREF_SET(__pyx_v_result, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "cydatemap/cydatemap.pyx":132
+    /* "cydatemap/cydatemap.pyx":146
  *                 continue
  *             result = intr.lower_bound if intr.lower_closed else intr.lower_bound + timedelta(days=1)
  *             duration = measure(intr)             # <<<<<<<<<<<<<<
  *             if remaining < duration:
  *                 result += timedelta(days=remaining)
  */
-    __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_f_9cydatemap_9cydatemap_measure(__pyx_v_intr)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 132, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_f_9cydatemap_9cydatemap_measure(__pyx_v_intr)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 146, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_XDECREF_SET(__pyx_v_duration, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "cydatemap/cydatemap.pyx":133
+    /* "cydatemap/cydatemap.pyx":147
  *             result = intr.lower_bound if intr.lower_closed else intr.lower_bound + timedelta(days=1)
  *             duration = measure(intr)
  *             if remaining < duration:             # <<<<<<<<<<<<<<
  *                 result += timedelta(days=remaining)
  *                 break
  */
-    __pyx_t_7 = PyObject_RichCompare(__pyx_v_remaining, __pyx_v_duration, Py_LT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 133, __pyx_L1_error)
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 133, __pyx_L1_error)
+    __pyx_t_7 = PyObject_RichCompare(__pyx_v_remaining, __pyx_v_duration, Py_LT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 147, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     if (__pyx_t_2) {
 
-      /* "cydatemap/cydatemap.pyx":134
+      /* "cydatemap/cydatemap.pyx":148
  *             duration = measure(intr)
  *             if remaining < duration:
  *                 result += timedelta(days=remaining)             # <<<<<<<<<<<<<<
  *                 break
  *             remaining -= duration
  */
-      __pyx_t_7 = PyDict_New(); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 134, __pyx_L1_error)
+      __pyx_t_7 = PyDict_New(); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 148, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_days, __pyx_v_remaining) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
-      __pyx_t_8 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7cpython_8datetime_timedelta), __pyx_empty_tuple, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 134, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_days, __pyx_v_remaining) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_7cpython_8datetime_timedelta), __pyx_empty_tuple, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 148, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyNumber_InPlaceAdd(__pyx_v_result, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 134, __pyx_L1_error)
+      __pyx_t_7 = PyNumber_InPlaceAdd(__pyx_v_result, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 148, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF_SET(__pyx_v_result, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "cydatemap/cydatemap.pyx":135
+      /* "cydatemap/cydatemap.pyx":149
  *             if remaining < duration:
  *                 result += timedelta(days=remaining)
  *                 break             # <<<<<<<<<<<<<<
@@ -4596,7 +4800,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  */
       goto __pyx_L8_break;
 
-      /* "cydatemap/cydatemap.pyx":133
+      /* "cydatemap/cydatemap.pyx":147
  *             result = intr.lower_bound if intr.lower_closed else intr.lower_bound + timedelta(days=1)
  *             duration = measure(intr)
  *             if remaining < duration:             # <<<<<<<<<<<<<<
@@ -4605,19 +4809,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  */
     }
 
-    /* "cydatemap/cydatemap.pyx":136
+    /* "cydatemap/cydatemap.pyx":150
  *                 result += timedelta(days=remaining)
  *                 break
  *             remaining -= duration             # <<<<<<<<<<<<<<
  *         return result
  * 
  */
-    __pyx_t_7 = PyNumber_InPlaceSubtract(__pyx_v_remaining, __pyx_v_duration); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 136, __pyx_L1_error)
+    __pyx_t_7 = PyNumber_InPlaceSubtract(__pyx_v_remaining, __pyx_v_duration); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF_SET(__pyx_v_remaining, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "cydatemap/cydatemap.pyx":128
+    /* "cydatemap/cydatemap.pyx":142
  *         remaining = day
  *         cdef DateInterval intr
  *         for intr in self.intervals:             # <<<<<<<<<<<<<<
@@ -4629,7 +4833,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
   __pyx_L8_break:;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "cydatemap/cydatemap.pyx":137
+  /* "cydatemap/cydatemap.pyx":151
  *                 break
  *             remaining -= duration
  *         return result             # <<<<<<<<<<<<<<
@@ -4637,12 +4841,12 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
  *     def days_between(self, lower, upper, lower_closed, upper_closed):
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_result)) { __Pyx_RaiseUnboundLocalError("result"); __PYX_ERR(0, 137, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_result)) { __Pyx_RaiseUnboundLocalError("result"); __PYX_ERR(0, 151, __pyx_L1_error) }
   __Pyx_INCREF(__pyx_v_result);
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":120
+  /* "cydatemap/cydatemap.pyx":134
  *         return timedelta(days=result)
  * 
  *     def date_of(DateMap self, int day):             # <<<<<<<<<<<<<<
@@ -4668,7 +4872,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_30date_of(struct __pyx_
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":139
+/* "cydatemap/cydatemap.pyx":153
  *         return result
  * 
  *     def days_between(self, lower, upper, lower_closed, upper_closed):             # <<<<<<<<<<<<<<
@@ -4713,23 +4917,23 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_33days_between(PyObject
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_upper)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, 1); __PYX_ERR(0, 139, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, 1); __PYX_ERR(0, 153, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_lower_closed)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, 2); __PYX_ERR(0, 139, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, 2); __PYX_ERR(0, 153, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_upper_closed)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, 3); __PYX_ERR(0, 139, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, 3); __PYX_ERR(0, 153, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "days_between") < 0)) __PYX_ERR(0, 139, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "days_between") < 0)) __PYX_ERR(0, 153, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -4746,7 +4950,7 @@ static PyObject *__pyx_pw_9cydatemap_9cydatemap_7DateMap_33days_between(PyObject
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 139, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("days_between", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 153, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("cydatemap.cydatemap.DateMap.days_between", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4772,14 +4976,14 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
   PyObject *(*__pyx_t_4)(PyObject *);
   __Pyx_RefNannySetupContext("days_between", 0);
 
-  /* "cydatemap/cydatemap.pyx":140
+  /* "cydatemap/cydatemap.pyx":154
  * 
  *     def days_between(self, lower, upper, lower_closed, upper_closed):
  *         cdef DateIntervalSet intrv = DateIntervalSet((DateInterval(lower, upper, lower_closed, upper_closed, True, True),))             # <<<<<<<<<<<<<<
  *         cdef int total = 0
  *         cdef DateIntervalSet intersection = self.intervals.intersection(intrv)
  */
-  __pyx_t_1 = PyTuple_New(6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_lower);
   __Pyx_GIVEREF(__pyx_v_lower);
@@ -4799,26 +5003,26 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
   __Pyx_INCREF(Py_True);
   __Pyx_GIVEREF(Py_True);
   PyTuple_SET_ITEM(__pyx_t_1, 5, Py_True);
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateInterval), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_intrv = ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cydatemap/cydatemap.pyx":141
+  /* "cydatemap/cydatemap.pyx":155
  *     def days_between(self, lower, upper, lower_closed, upper_closed):
  *         cdef DateIntervalSet intrv = DateIntervalSet((DateInterval(lower, upper, lower_closed, upper_closed, True, True),))
  *         cdef int total = 0             # <<<<<<<<<<<<<<
@@ -4827,19 +5031,19 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
  */
   __pyx_v_total = 0;
 
-  /* "cydatemap/cydatemap.pyx":142
+  /* "cydatemap/cydatemap.pyx":156
  *         cdef DateIntervalSet intrv = DateIntervalSet((DateInterval(lower, upper, lower_closed, upper_closed, True, True),))
  *         cdef int total = 0
  *         cdef DateIntervalSet intersection = self.intervals.intersection(intrv)             # <<<<<<<<<<<<<<
  *         cdef DateInterval current
  *         for current in intersection:
  */
-  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->intersection(__pyx_v_self->intervals, __pyx_v_intrv, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_v_self->intervals->__pyx_vtab)->intersection(__pyx_v_self->intervals, __pyx_v_intrv, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_intersection = ((struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cydatemap/cydatemap.pyx":144
+  /* "cydatemap/cydatemap.pyx":158
  *         cdef DateIntervalSet intersection = self.intervals.intersection(intrv)
  *         cdef DateInterval current
  *         for current in intersection:             # <<<<<<<<<<<<<<
@@ -4850,26 +5054,26 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
     __pyx_t_1 = ((PyObject *)__pyx_v_intersection); __Pyx_INCREF(__pyx_t_1); __pyx_t_3 = 0;
     __pyx_t_4 = NULL;
   } else {
-    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(((PyObject *)__pyx_v_intersection)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(((PyObject *)__pyx_v_intersection)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 158, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_4)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 158, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 158, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -4879,17 +5083,17 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 144, __pyx_L1_error)
+          else __PYX_ERR(0, 158, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_2);
     }
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 144, __pyx_L1_error)
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 158, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_current, ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "cydatemap/cydatemap.pyx":145
+    /* "cydatemap/cydatemap.pyx":159
  *         cdef DateInterval current
  *         for current in intersection:
  *             total += measure(current)             # <<<<<<<<<<<<<<
@@ -4898,7 +5102,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
  */
     __pyx_v_total = (__pyx_v_total + __pyx_f_9cydatemap_9cydatemap_measure(__pyx_v_current));
 
-    /* "cydatemap/cydatemap.pyx":144
+    /* "cydatemap/cydatemap.pyx":158
  *         cdef DateIntervalSet intersection = self.intervals.intersection(intrv)
  *         cdef DateInterval current
  *         for current in intersection:             # <<<<<<<<<<<<<<
@@ -4908,7 +5112,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cydatemap/cydatemap.pyx":146
+  /* "cydatemap/cydatemap.pyx":160
  *         for current in intersection:
  *             total += measure(current)
  *         return total             # <<<<<<<<<<<<<<
@@ -4916,13 +5120,13 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
  *     def split(self, max_gap):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_total); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_total); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":139
+  /* "cydatemap/cydatemap.pyx":153
  *         return result
  * 
  *     def days_between(self, lower, upper, lower_closed, upper_closed):             # <<<<<<<<<<<<<<
@@ -4945,7 +5149,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_32days_between(struct _
   return __pyx_r;
 }
 
-/* "cydatemap/cydatemap.pyx":148
+/* "cydatemap/cydatemap.pyx":162
  *         return total
  * 
  *     def split(self, max_gap):             # <<<<<<<<<<<<<<
@@ -4985,7 +5189,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("split", 0);
 
-  /* "cydatemap/cydatemap.pyx":152
+  /* "cydatemap/cydatemap.pyx":166
  *         Split into multiple datemaps on any gap larger than max_gap.
  *         '''
  *         if self.intervals.n_intervals < 2:             # <<<<<<<<<<<<<<
@@ -4995,7 +5199,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
   __pyx_t_1 = ((__pyx_v_self->intervals->__pyx_base.n_intervals < 2) != 0);
   if (__pyx_t_1) {
 
-    /* "cydatemap/cydatemap.pyx":153
+    /* "cydatemap/cydatemap.pyx":167
  *         '''
  *         if self.intervals.n_intervals < 2:
  *             return self             # <<<<<<<<<<<<<<
@@ -5007,7 +5211,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
     __pyx_r = ((PyObject *)__pyx_v_self);
     goto __pyx_L0;
 
-    /* "cydatemap/cydatemap.pyx":152
+    /* "cydatemap/cydatemap.pyx":166
  *         Split into multiple datemaps on any gap larger than max_gap.
  *         '''
  *         if self.intervals.n_intervals < 2:             # <<<<<<<<<<<<<<
@@ -5016,48 +5220,48 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
  */
   }
 
-  /* "cydatemap/cydatemap.pyx":155
+  /* "cydatemap/cydatemap.pyx":169
  *             return self
  *         cdef DateInterval previous, current
  *         previous = self.intervals[0]             # <<<<<<<<<<<<<<
  *         cdef date previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
  *         cdef date current_lower
  */
-  __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->intervals), 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->intervals), 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 155, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 169, __pyx_L1_error)
   __pyx_v_previous = ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "cydatemap/cydatemap.pyx":156
+  /* "cydatemap/cydatemap.pyx":170
  *         cdef DateInterval previous, current
  *         previous = self.intervals[0]
  *         cdef date previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day             # <<<<<<<<<<<<<<
  *         cdef date current_lower
  *         cdef list current_intervals = [previous]
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_previous->__pyx_base.upper_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_previous->__pyx_base.upper_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 170, __pyx_L1_error)
   if (__pyx_t_1) {
     __Pyx_INCREF(((PyObject *)__pyx_v_previous->upper_bound));
     __pyx_t_2 = ((PyObject *)__pyx_v_previous->upper_bound);
   } else {
-    __pyx_t_3 = PyNumber_Subtract(((PyObject *)__pyx_v_previous->upper_bound), ((PyObject *)__pyx_v_9cydatemap_9cydatemap_day)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Subtract(((PyObject *)__pyx_v_previous->upper_bound), ((PyObject *)__pyx_v_9cydatemap_9cydatemap_day)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_7cpython_8datetime_date))))) __PYX_ERR(0, 156, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_7cpython_8datetime_date))))) __PYX_ERR(0, 170, __pyx_L1_error)
     __pyx_t_2 = __pyx_t_3;
     __pyx_t_3 = 0;
   }
   __pyx_v_previous_upper = ((PyDateTime_Date *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "cydatemap/cydatemap.pyx":158
+  /* "cydatemap/cydatemap.pyx":172
  *         cdef date previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
  *         cdef date current_lower
  *         cdef list current_intervals = [previous]             # <<<<<<<<<<<<<<
  *         cdef list result = []
  *         for current in self.intervals[1:]:
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_v_previous));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_previous));
@@ -5065,34 +5269,34 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
   __pyx_v_current_intervals = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "cydatemap/cydatemap.pyx":159
+  /* "cydatemap/cydatemap.pyx":173
  *         cdef date current_lower
  *         cdef list current_intervals = [previous]
  *         cdef list result = []             # <<<<<<<<<<<<<<
  *         for current in self.intervals[1:]:
  *             current_lower = current.lower_bound if current.lower_closed else current.lower_bound + day
  */
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_result = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "cydatemap/cydatemap.pyx":160
+  /* "cydatemap/cydatemap.pyx":174
  *         cdef list current_intervals = [previous]
  *         cdef list result = []
  *         for current in self.intervals[1:]:             # <<<<<<<<<<<<<<
  *             current_lower = current.lower_bound if current.lower_closed else current.lower_bound + day
  *             if (current_lower - previous_upper).days > max_gap:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_self->intervals), 1, 0, NULL, NULL, &__pyx_slice__2, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_self->intervals), 1, 0, NULL, NULL, &__pyx_slice__2, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
     __pyx_t_3 = __pyx_t_2; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 174, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
@@ -5100,17 +5304,17 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 160, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 174, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 160, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 174, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -5120,96 +5324,96 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 160, __pyx_L1_error)
+          else __PYX_ERR(0, 174, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_2);
     }
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_10cyinterval_10cyinterval_DateInterval))))) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_current, ((struct __pyx_obj_10cyinterval_10cyinterval_DateInterval *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "cydatemap/cydatemap.pyx":161
+    /* "cydatemap/cydatemap.pyx":175
  *         cdef list result = []
  *         for current in self.intervals[1:]:
  *             current_lower = current.lower_bound if current.lower_closed else current.lower_bound + day             # <<<<<<<<<<<<<<
  *             if (current_lower - previous_upper).days > max_gap:
  *                 result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
  */
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_current->__pyx_base.lower_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 161, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_current->__pyx_base.lower_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 175, __pyx_L1_error)
     if (__pyx_t_1) {
       __Pyx_INCREF(((PyObject *)__pyx_v_current->lower_bound));
       __pyx_t_2 = ((PyObject *)__pyx_v_current->lower_bound);
     } else {
-      __pyx_t_6 = PyNumber_Add(((PyObject *)__pyx_v_current->lower_bound), ((PyObject *)__pyx_v_9cydatemap_9cydatemap_day)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 161, __pyx_L1_error)
+      __pyx_t_6 = PyNumber_Add(((PyObject *)__pyx_v_current->lower_bound), ((PyObject *)__pyx_v_9cydatemap_9cydatemap_day)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 175, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_7cpython_8datetime_date))))) __PYX_ERR(0, 161, __pyx_L1_error)
+      if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_7cpython_8datetime_date))))) __PYX_ERR(0, 175, __pyx_L1_error)
       __pyx_t_2 = __pyx_t_6;
       __pyx_t_6 = 0;
     }
     __Pyx_XDECREF_SET(__pyx_v_current_lower, ((PyDateTime_Date *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "cydatemap/cydatemap.pyx":162
+    /* "cydatemap/cydatemap.pyx":176
  *         for current in self.intervals[1:]:
  *             current_lower = current.lower_bound if current.lower_closed else current.lower_bound + day
  *             if (current_lower - previous_upper).days > max_gap:             # <<<<<<<<<<<<<<
  *                 result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
  *                 current_intervals = []
  */
-    __pyx_t_2 = PyNumber_Subtract(((PyObject *)__pyx_v_current_lower), ((PyObject *)__pyx_v_previous_upper)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Subtract(((PyObject *)__pyx_v_current_lower), ((PyObject *)__pyx_v_previous_upper)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_days); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_days); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_6, __pyx_v_max_gap, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_6, __pyx_v_max_gap, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_1) {
 
-      /* "cydatemap/cydatemap.pyx":163
+      /* "cydatemap/cydatemap.pyx":177
  *             current_lower = current.lower_bound if current.lower_closed else current.lower_bound + day
  *             if (current_lower - previous_upper).days > max_gap:
  *                 result.append(DateMap(DateIntervalSet(tuple(current_intervals))))             # <<<<<<<<<<<<<<
  *                 current_intervals = []
  *             current_intervals.append(current)
  */
-      __pyx_t_2 = PyList_AsTuple(__pyx_v_current_intervals); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_2 = PyList_AsTuple(__pyx_v_current_intervals); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_result, __pyx_t_2); if (unlikely(__pyx_t_7 == -1)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_result, __pyx_t_2); if (unlikely(__pyx_t_7 == -1)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "cydatemap/cydatemap.pyx":164
+      /* "cydatemap/cydatemap.pyx":178
  *             if (current_lower - previous_upper).days > max_gap:
  *                 result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
  *                 current_intervals = []             # <<<<<<<<<<<<<<
  *             current_intervals.append(current)
  *             previous = current
  */
-      __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
+      __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF_SET(__pyx_v_current_intervals, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "cydatemap/cydatemap.pyx":162
+      /* "cydatemap/cydatemap.pyx":176
  *         for current in self.intervals[1:]:
  *             current_lower = current.lower_bound if current.lower_closed else current.lower_bound + day
  *             if (current_lower - previous_upper).days > max_gap:             # <<<<<<<<<<<<<<
@@ -5218,16 +5422,16 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
  */
     }
 
-    /* "cydatemap/cydatemap.pyx":165
+    /* "cydatemap/cydatemap.pyx":179
  *                 result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
  *                 current_intervals = []
  *             current_intervals.append(current)             # <<<<<<<<<<<<<<
  *             previous = current
  *             previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
  */
-    __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_current_intervals, ((PyObject *)__pyx_v_current)); if (unlikely(__pyx_t_7 == -1)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_current_intervals, ((PyObject *)__pyx_v_current)); if (unlikely(__pyx_t_7 == -1)) __PYX_ERR(0, 179, __pyx_L1_error)
 
-    /* "cydatemap/cydatemap.pyx":166
+    /* "cydatemap/cydatemap.pyx":180
  *                 current_intervals = []
  *             current_intervals.append(current)
  *             previous = current             # <<<<<<<<<<<<<<
@@ -5237,28 +5441,28 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
     __Pyx_INCREF(((PyObject *)__pyx_v_current));
     __Pyx_DECREF_SET(__pyx_v_previous, __pyx_v_current);
 
-    /* "cydatemap/cydatemap.pyx":167
+    /* "cydatemap/cydatemap.pyx":181
  *             current_intervals.append(current)
  *             previous = current
  *             previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day             # <<<<<<<<<<<<<<
  *         result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
  *         return result
  */
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_previous->__pyx_base.upper_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(((PyObject *)__pyx_v_previous->__pyx_base.upper_closed)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 181, __pyx_L1_error)
     if (__pyx_t_1) {
       __Pyx_INCREF(((PyObject *)__pyx_v_previous->upper_bound));
       __pyx_t_2 = ((PyObject *)__pyx_v_previous->upper_bound);
     } else {
-      __pyx_t_6 = PyNumber_Subtract(((PyObject *)__pyx_v_previous->upper_bound), ((PyObject *)__pyx_v_9cydatemap_9cydatemap_day)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __pyx_t_6 = PyNumber_Subtract(((PyObject *)__pyx_v_previous->upper_bound), ((PyObject *)__pyx_v_9cydatemap_9cydatemap_day)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 181, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_7cpython_8datetime_date))))) __PYX_ERR(0, 167, __pyx_L1_error)
+      if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_7cpython_8datetime_date))))) __PYX_ERR(0, 181, __pyx_L1_error)
       __pyx_t_2 = __pyx_t_6;
       __pyx_t_6 = 0;
     }
     __Pyx_DECREF_SET(__pyx_v_previous_upper, ((PyDateTime_Date *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "cydatemap/cydatemap.pyx":160
+    /* "cydatemap/cydatemap.pyx":174
  *         cdef list current_intervals = [previous]
  *         cdef list result = []
  *         for current in self.intervals[1:]:             # <<<<<<<<<<<<<<
@@ -5268,35 +5472,35 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cydatemap/cydatemap.pyx":168
+  /* "cydatemap/cydatemap.pyx":182
  *             previous = current
  *             previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
  *         result.append(DateMap(DateIntervalSet(tuple(current_intervals))))             # <<<<<<<<<<<<<<
  *         return result
  * 
  */
-  __pyx_t_3 = PyList_AsTuple(__pyx_v_current_intervals); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_3 = PyList_AsTuple(__pyx_v_current_intervals); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap), __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_result, __pyx_t_3); if (unlikely(__pyx_t_7 == -1)) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_result, __pyx_t_3); if (unlikely(__pyx_t_7 == -1)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "cydatemap/cydatemap.pyx":169
+  /* "cydatemap/cydatemap.pyx":183
  *             previous_upper = previous.upper_bound if previous.upper_closed else previous.upper_bound - day
  *         result.append(DateMap(DateIntervalSet(tuple(current_intervals))))
  *         return result             # <<<<<<<<<<<<<<
@@ -5308,7 +5512,7 @@ static PyObject *__pyx_pf_9cydatemap_9cydatemap_7DateMap_34split(struct __pyx_ob
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "cydatemap/cydatemap.pyx":148
+  /* "cydatemap/cydatemap.pyx":162
  *         return total
  * 
  *     def split(self, max_gap):             # <<<<<<<<<<<<<<
@@ -7288,6 +7492,14 @@ static int __pyx_tp_clear_9cydatemap_9cydatemap_DateMap(PyObject *o) {
   return 0;
 }
 
+static PyObject *__pyx_getprop_9cydatemap_9cydatemap_7DateMap_upper_bound(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_9cydatemap_9cydatemap_7DateMap_11upper_bound_1__get__(o);
+}
+
+static PyObject *__pyx_getprop_9cydatemap_9cydatemap_7DateMap_lower_bound(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_9cydatemap_9cydatemap_7DateMap_11lower_bound_1__get__(o);
+}
+
 static PyObject *__pyx_getprop_9cydatemap_9cydatemap_7DateMap_intervals(PyObject *o, CYTHON_UNUSED void *x) {
   return __pyx_pw_9cydatemap_9cydatemap_7DateMap_9intervals_1__get__(o);
 }
@@ -7317,6 +7529,8 @@ static PyMethodDef __pyx_methods_9cydatemap_9cydatemap_DateMap[] = {
 };
 
 static struct PyGetSetDef __pyx_getsets_9cydatemap_9cydatemap_DateMap[] = {
+  {(char *)"upper_bound", __pyx_getprop_9cydatemap_9cydatemap_7DateMap_upper_bound, 0, (char *)0, 0},
+  {(char *)"lower_bound", __pyx_getprop_9cydatemap_9cydatemap_7DateMap_lower_bound, 0, (char *)0, 0},
   {(char *)"intervals", __pyx_getprop_9cydatemap_9cydatemap_7DateMap_intervals, 0, (char *)0, 0},
   {(char *)"period", __pyx_getprop_9cydatemap_9cydatemap_7DateMap_period, 0, (char *)0, 0},
   {(char *)"bounded", __pyx_getprop_9cydatemap_9cydatemap_7DateMap_bounded, 0, (char *)0, 0},
@@ -7531,9 +7745,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_NotImplemented = __Pyx_GetBuiltinName(__pyx_n_s_NotImplemented); if (!__pyx_builtin_NotImplemented) __PYX_ERR(0, 36, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 102, __pyx_L1_error)
-  __pyx_builtin_IndexError = __Pyx_GetBuiltinName(__pyx_n_s_IndexError); if (!__pyx_builtin_IndexError) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_builtin_NotImplemented = __Pyx_GetBuiltinName(__pyx_n_s_NotImplemented); if (!__pyx_builtin_NotImplemented) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_builtin_IndexError = __Pyx_GetBuiltinName(__pyx_n_s_IndexError); if (!__pyx_builtin_IndexError) __PYX_ERR(0, 137, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -7543,25 +7757,25 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "cydatemap/cydatemap.pyx":117
+  /* "cydatemap/cydatemap.pyx":131
  *                 result += measure(intr)
  *             else:
  *                 raise ValueError('This line should never be reached.  There is a bug in cydatemap.')             # <<<<<<<<<<<<<<
  *         return timedelta(days=result)
  * 
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_This_line_should_never_be_reache); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_This_line_should_never_be_reache); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 131, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "cydatemap/cydatemap.pyx":160
+  /* "cydatemap/cydatemap.pyx":174
  *         cdef list current_intervals = [previous]
  *         cdef list result = []
  *         for current in self.intervals[1:]:             # <<<<<<<<<<<<<<
  *             current_lower = current.lower_bound if current.lower_closed else current.lower_bound + day
  *             if (current_lower - previous_upper).days > max_gap:
  */
-  __pyx_slice__2 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_slice__2 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__2)) __PYX_ERR(0, 174, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__2);
   __Pyx_GIVEREF(__pyx_slice__2);
 
@@ -7709,21 +7923,21 @@ PyMODINIT_FUNC PyInit_cydatemap(void)
   __pyx_ptype_10cyinterval_10cyinterval_ObjectIntervalSetIterator = __Pyx_ImportType("cyinterval.cyinterval", "ObjectIntervalSetIterator", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSetIterator), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_ObjectIntervalSetIterator)) __PYX_ERR(7, 37, __pyx_L1_error)
   __pyx_ptype_10cyinterval_10cyinterval_ObjectIntervalSet = __Pyx_ImportType("cyinterval.cyinterval", "ObjectIntervalSet", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_ObjectIntervalSet), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_ObjectIntervalSet)) __PYX_ERR(7, 40, __pyx_L1_error)
   __pyx_vtabptr_10cyinterval_10cyinterval_ObjectIntervalSet = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_ObjectIntervalSet*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_ObjectIntervalSet->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_ObjectIntervalSet)) __PYX_ERR(7, 40, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_DateInterval = __Pyx_ImportType("cyinterval.cyinterval", "DateInterval", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_DateInterval), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_DateInterval)) __PYX_ERR(7, 54, __pyx_L1_error)
-  __pyx_vtabptr_10cyinterval_10cyinterval_DateInterval = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_DateInterval->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_DateInterval)) __PYX_ERR(7, 54, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSetIterator = __Pyx_ImportType("cyinterval.cyinterval", "DateIntervalSetIterator", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSetIterator), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSetIterator)) __PYX_ERR(7, 72, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet = __Pyx_ImportType("cyinterval.cyinterval", "DateIntervalSet", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet)) __PYX_ERR(7, 75, __pyx_L1_error)
-  __pyx_vtabptr_10cyinterval_10cyinterval_DateIntervalSet = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_DateIntervalSet)) __PYX_ERR(7, 75, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_IntInterval = __Pyx_ImportType("cyinterval.cyinterval", "IntInterval", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_IntInterval), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_IntInterval)) __PYX_ERR(7, 89, __pyx_L1_error)
-  __pyx_vtabptr_10cyinterval_10cyinterval_IntInterval = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntInterval*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_IntInterval->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_IntInterval)) __PYX_ERR(7, 89, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_IntIntervalSetIterator = __Pyx_ImportType("cyinterval.cyinterval", "IntIntervalSetIterator", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSetIterator), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_IntIntervalSetIterator)) __PYX_ERR(7, 107, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_IntIntervalSet = __Pyx_ImportType("cyinterval.cyinterval", "IntIntervalSet", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_IntIntervalSet)) __PYX_ERR(7, 110, __pyx_L1_error)
-  __pyx_vtabptr_10cyinterval_10cyinterval_IntIntervalSet = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntIntervalSet*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_IntIntervalSet->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_IntIntervalSet)) __PYX_ERR(7, 110, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_FloatInterval = __Pyx_ImportType("cyinterval.cyinterval", "FloatInterval", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_FloatInterval), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_FloatInterval)) __PYX_ERR(7, 124, __pyx_L1_error)
-  __pyx_vtabptr_10cyinterval_10cyinterval_FloatInterval = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatInterval*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_FloatInterval->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_FloatInterval)) __PYX_ERR(7, 124, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSetIterator = __Pyx_ImportType("cyinterval.cyinterval", "FloatIntervalSetIterator", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSetIterator), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSetIterator)) __PYX_ERR(7, 142, __pyx_L1_error)
-  __pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSet = __Pyx_ImportType("cyinterval.cyinterval", "FloatIntervalSet", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSet)) __PYX_ERR(7, 145, __pyx_L1_error)
-  __pyx_vtabptr_10cyinterval_10cyinterval_FloatIntervalSet = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatIntervalSet*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSet->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_FloatIntervalSet)) __PYX_ERR(7, 145, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_DateInterval = __Pyx_ImportType("cyinterval.cyinterval", "DateInterval", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_DateInterval), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_DateInterval)) __PYX_ERR(7, 56, __pyx_L1_error)
+  __pyx_vtabptr_10cyinterval_10cyinterval_DateInterval = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateInterval*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_DateInterval->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_DateInterval)) __PYX_ERR(7, 56, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSetIterator = __Pyx_ImportType("cyinterval.cyinterval", "DateIntervalSetIterator", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSetIterator), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSetIterator)) __PYX_ERR(7, 74, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet = __Pyx_ImportType("cyinterval.cyinterval", "DateIntervalSet", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_DateIntervalSet), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet)) __PYX_ERR(7, 77, __pyx_L1_error)
+  __pyx_vtabptr_10cyinterval_10cyinterval_DateIntervalSet = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_DateIntervalSet*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_DateIntervalSet->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_DateIntervalSet)) __PYX_ERR(7, 77, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_IntInterval = __Pyx_ImportType("cyinterval.cyinterval", "IntInterval", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_IntInterval), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_IntInterval)) __PYX_ERR(7, 93, __pyx_L1_error)
+  __pyx_vtabptr_10cyinterval_10cyinterval_IntInterval = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntInterval*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_IntInterval->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_IntInterval)) __PYX_ERR(7, 93, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_IntIntervalSetIterator = __Pyx_ImportType("cyinterval.cyinterval", "IntIntervalSetIterator", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSetIterator), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_IntIntervalSetIterator)) __PYX_ERR(7, 111, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_IntIntervalSet = __Pyx_ImportType("cyinterval.cyinterval", "IntIntervalSet", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_IntIntervalSet), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_IntIntervalSet)) __PYX_ERR(7, 114, __pyx_L1_error)
+  __pyx_vtabptr_10cyinterval_10cyinterval_IntIntervalSet = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_IntIntervalSet*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_IntIntervalSet->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_IntIntervalSet)) __PYX_ERR(7, 114, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_FloatInterval = __Pyx_ImportType("cyinterval.cyinterval", "FloatInterval", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_FloatInterval), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_FloatInterval)) __PYX_ERR(7, 130, __pyx_L1_error)
+  __pyx_vtabptr_10cyinterval_10cyinterval_FloatInterval = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatInterval*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_FloatInterval->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_FloatInterval)) __PYX_ERR(7, 130, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSetIterator = __Pyx_ImportType("cyinterval.cyinterval", "FloatIntervalSetIterator", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSetIterator), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSetIterator)) __PYX_ERR(7, 148, __pyx_L1_error)
+  __pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSet = __Pyx_ImportType("cyinterval.cyinterval", "FloatIntervalSet", sizeof(struct __pyx_obj_10cyinterval_10cyinterval_FloatIntervalSet), 1); if (unlikely(!__pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSet)) __PYX_ERR(7, 151, __pyx_L1_error)
+  __pyx_vtabptr_10cyinterval_10cyinterval_FloatIntervalSet = (struct __pyx_vtabstruct_10cyinterval_10cyinterval_FloatIntervalSet*)__Pyx_GetVtable(__pyx_ptype_10cyinterval_10cyinterval_FloatIntervalSet->tp_dict); if (unlikely(!__pyx_vtabptr_10cyinterval_10cyinterval_FloatIntervalSet)) __PYX_ERR(7, 151, __pyx_L1_error)
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   __pyx_t_1 = __Pyx_ImportModule("cyinterval.cyinterval"); if (!__pyx_t_1) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -7762,27 +7976,27 @@ PyMODINIT_FUNC PyInit_cydatemap(void)
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "cydatemap/cydatemap.pyx":27
+  /* "cydatemap/cydatemap.pyx":41
  * 
  *     @classmethod
  *     def from_tuples(cls, list tuples):             # <<<<<<<<<<<<<<
  *         intervals = []
  *         for policy in tuples:
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap, __pyx_n_s_from_tuples); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap, __pyx_n_s_from_tuples); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "cydatemap/cydatemap.pyx":26
- *                 break
+  /* "cydatemap/cydatemap.pyx":40
+ *             return None
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
  *     def from_tuples(cls, list tuples):
  *         intervals = []
  */
-  __pyx_t_3 = __Pyx_Method_ClassMethod(__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 26, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Method_ClassMethod(__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap->tp_dict, __pyx_n_s_from_tuples, __pyx_t_3) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9cydatemap_9cydatemap_DateMap->tp_dict, __pyx_n_s_from_tuples, __pyx_t_3) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   PyType_Modified(__pyx_ptype_9cydatemap_9cydatemap_DateMap);
 

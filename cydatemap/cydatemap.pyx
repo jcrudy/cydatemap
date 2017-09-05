@@ -22,6 +22,20 @@ cdef class DateMap:
             else:
                 self.bounded = False
                 break
+    
+    @property
+    def upper_bound(DateMap self):
+        if self.intervals.upper_bounded():
+            return self.intervals.upper_bound()
+        else:
+            return None
+        
+    @property
+    def lower_bound(DateMap self):
+        if self.intervals.lower_bounded():
+            return self.intervals.lower_bound()
+        else:
+            return None
         
     @classmethod
     def from_tuples(cls, list tuples):

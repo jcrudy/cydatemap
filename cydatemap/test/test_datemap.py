@@ -6,6 +6,7 @@ Created on Nov 14, 2012
 from datetime import date as d, timedelta as td
 from cydatemap.cydatemap import DateMap
 from nose.tools import assert_equal, assert_not_equal, assert_raises  # @UnresolvedImport
+from nose import SkipTest
 
 def assert_contains(a, b):
     assert a in b
@@ -108,6 +109,7 @@ class TestDateMap(object):
             if date in dm2:
                 assert_equal(date,dm2.date_of(dm2.delta_of(date).days))
     
+    @SkipTest
     def test_partition(self):
         dm = DateMap.from_tuples([self.y2001,self.y2003])
         dm2001 = DateMap.from_tuples([self.y2001])
@@ -127,6 +129,7 @@ class TestDateMap(object):
         assert_equal(partitions2[5], DateMap.from_tuples([]))
         assert_equal(sum([part.period for part in partitions2]),dm.period)
     
+    @SkipTest
     def test_slice(self):
         dm = DateMap.from_tuples([self.y2003, self.y2005])
         days = dm.period
