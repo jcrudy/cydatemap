@@ -23,6 +23,9 @@ cdef class DateMap:
                 self.bounded = False
                 break
     
+    def __nonzero__(DateMap self):
+        return not self.intervals.empty()
+    
     @property
     def upper_bound(DateMap self):
         if self.intervals.upper_bounded():
