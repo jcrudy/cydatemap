@@ -35,7 +35,7 @@ install:
   # Install the build and runtime dependencies of the project.
   - "conda install -y conda-env"
   - "conda env create"
-  - "activate clinvocdev"
+  - "activate cydatemapdev"
   - "python setup.py bdist_wheel"
   - ps: "ls"
   - ps: "ls dist"
