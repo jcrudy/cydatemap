@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "depends": [], 
-        "name": "cydatemap.cydatemap", 
+        "depends": [],
+        "name": "cydatemap.cydatemap",
         "sources": [
             "cydatemap/cydatemap.pyx"
         ]
-    }, 
+    },
     "module_name": "cydatemap.cydatemap"
 }
 END: Cython Metadata */
